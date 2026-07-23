@@ -1,9 +1,29 @@
-// shared-nav.js — Shared Navigation, Mobile Drawer & Interactions
+// shared-nav.js — Shared Navigation, Dark Mode Toggle & Interactions
 // Designed according to Academic Chic UI/UX Specifications for DFCL
 // Device Fabrication and Characterization Lab (DFCL)
 
 (function() {
   'use strict';
+
+  // Apply dark mode theme immediately to prevent flicker
+  function initTheme() {
+    try {
+      var savedTheme = localStorage.getItem('dfcl_theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var isDark = savedTheme ? (savedTheme === 'dark') : prefersDark;
+      if (isDark) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.body.classList.add('dark-mode');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.body.classList.remove('dark-mode');
+      }
+    } catch(e) {
+      console.warn('Theme initialization fallback:', e);
+    }
+  }
+
+  initTheme();
 
   function getBasePath() {
     var path = window.location.pathname;
@@ -64,6 +84,7 @@
 
     var activePage = getCurrentPage();
     var joinHref = BASE + 'pages/members/index.html#open-positions';
+    var isDarkMode = document.body.classList.contains('dark-mode');
 
     var desktopNavLinks = PAGES.map(function(p) {
       var isActive = p.label === activePage;
@@ -81,21 +102,46 @@
       '<div class="container">' +
         '<div class="nav-container">' +
           '<a href="' + escapeHtml(BASE + 'pages/home/index.html') + '" class="brand-logo" aria-label="Device Fabrication and Characterization Lab Home">' +
-            '<span class="brand-badge">DFCL</span> Device Fabrication & Characterization Lab' +
+            '<span class="brand-badge">DFCL</span> Device Fabrication &amp; Characterization Lab' +
           '</a>' +
           '<nav class="nav-links-desktop" aria-label="Primary navigation">' +
             desktopNavLinks +
+            '<button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">' +
+              '<span class="material-symbols-outlined" style="font-size:20px;">' + (isDarkMode ? 'light_mode' : 'dark_mode') + '</span>' +
+            '</button>' +
             '<a href="' + escapeHtml(joinHref) + '" class="btn-nav-action">Join DFCL</a>' +
           '</nav>' +
-          '<button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-drawer">' +
-            '<span class="material-symbols-outlined" style="font-size:28px;">menu</span>' +
-          '</button>' +
+          '<div style="display:flex;align-items:center;gap:0.5rem;" class="mobile-actions">' +
+            '<button class="theme-toggle-btn" id="theme-toggle-btn-mobile" aria-label="Toggle dark mode" title="Toggle dark mode">' +
+              '<span class="material-symbols-outlined" style="font-size:20px;">' + (isDarkMode ? 'light_mode' : 'dark_mode') + '</span>' +
+            '</button>' +
+            '<button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-drawer">' +
+              '<span class="material-symbols-outlined" style="font-size:28px;">menu</span>' +
+            '</button>' +
+          '</div>' +
         '</div>' +
       '</div>' +
       '<div class="mobile-drawer" id="mobile-drawer" role="navigation" aria-label="Mobile navigation">' +
         mobileNavLinks +
         '<a href="' + escapeHtml(joinHref) + '" class="btn-nav-action mobile-nav-link" style="text-align:center;margin-top:0.5rem;">Join DFCL</a>' +
       '</div>';
+
+    function toggleTheme() {
+      var currentlyDark = document.body.classList.toggle('dark-mode');
+      var theme = currentlyDark ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      try { localStorage.setItem('dfcl_theme', theme); } catch(e) {}
+
+      var icons = document.querySelectorAll('.theme-toggle-btn .material-symbols-outlined');
+      icons.forEach(function(icon) {
+        icon.textContent = currentlyDark ? 'light_mode' : 'dark_mode';
+      });
+    }
+
+    var themeBtnDesktop = document.getElementById('theme-toggle-btn');
+    var themeBtnMobile  = document.getElementById('theme-toggle-btn-mobile');
+    if (themeBtnDesktop) themeBtnDesktop.addEventListener('click', toggleTheme);
+    if (themeBtnMobile)  themeBtnMobile.addEventListener('click', toggleTheme);
 
     var toggleBtn = document.getElementById('mobile-toggle');
     var drawer = document.getElementById('mobile-drawer');

@@ -50,6 +50,104 @@
   --academic-shadow-hover: 0 20px 40px -15px rgba(0, 108, 74, 0.15);
 }
 
+/* ============================================================
+   DARK MODE THEME VARIABLES
+   ============================================================ */
+
+body.dark-mode,
+[data-theme="dark"] {
+  --bg-surface-low: #0f172a;
+  --paper-white: #1e293b;
+  --bg-surface-container: #334155;
+  --slate-heading: #f8fafc;
+  --on-surface-variant: #cbd5e1;
+  --subtle-border: #334155;
+  --academic-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --academic-shadow-hover: 0 8px 30px rgba(16, 185, 129, 0.2);
+}
+
+body.dark-mode {
+  background-color: var(--bg-surface-low);
+  color: var(--on-surface-variant);
+}
+
+body.dark-mode .header-nav {
+  background: rgba(15, 23, 42, 0.9);
+  border-bottom-color: #334155;
+}
+
+body.dark-mode .hero-section {
+  background: radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.15) 0%, var(--bg-surface-low) 70%);
+}
+
+body.dark-mode .announcement-badge {
+  background: rgba(30, 41, 59, 0.95);
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+body.dark-mode .hero-metric-pill {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+body.dark-mode .search-input-field {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+body.dark-mode .filter-chip-btn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #cbd5e1;
+}
+
+body.dark-mode .filter-chip-btn:hover {
+  border-color: var(--emerald-accent);
+  color: var(--emerald-accent);
+}
+
+body.dark-mode .filter-chip-btn.active {
+  background: var(--secondary);
+  color: white;
+}
+
+body.dark-mode .member-avatar-container {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+}
+
+body.dark-mode .skip-link {
+  background: var(--secondary);
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px solid var(--subtle-border);
+  color: var(--slate-heading);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--bg-surface-low);
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+/* Base theme transitions */
+body, .header-nav, .hero-section, .bento-card, .member-profile-card,
+.news-card, .pub-card-academic, .infra-card, .project-card-academic {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 /* Reset & Core */
 *, *::before, *::after {
   box-sizing: border-box;
