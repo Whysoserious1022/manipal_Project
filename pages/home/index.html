@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dharmapura Lab | Semiconductor Design for Energy and Optoelectronics</title>
+  <meta name="description" content="Murthy Dharmapura Lab — Research group at MIT Manipal focusing on semiconductor design for energy and optoelectronics."/>
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://cdn.sanity.io data:; connect-src 'none'; frame-ancestors 'none';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <!-- Favicon placeholder (emoji favicon via SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="../../design-system/academic-chic.css"/>
+</head>
+<body>
+
+  <!-- Shared Floating Header (injected by shared-nav.js) -->
+  <header id="site-header"></header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="tag-label">INNOVATION IN MATERIALS</span>
+            <h1 class="display-lg" style="margin-bottom: 1.5rem;">
+              Semiconductor Design for <span class="text-accent-secondary" style="font-style: italic;">Energy</span> and Optoelectronics
+            </h1>
+            <p style="font-size: 1.125rem; color: var(--on-surface-variant); margin-bottom: 2rem; max-width: 580px; line-height: 1.65;">
+              Located at MAHE, Manipal, our vision is to develop functional materials that rationally tune properties for a sustainable future.
+            </p>
+            <div class="btn-group">
+              <a href="../../pages/research/index.html" class="btn-primary">
+                Explore Research <span class="material-symbols-outlined" style="font-size: 18px;">arrow_outward</span>
+              </a>
+              <a href="#contact" class="btn-secondary-outline">Get in Touch</a>
+            </div>
+          </div>
+
+          <div style="position: relative;">
+            <div class="hero-image-wrapper">
+              <img src="https://cdn.sanity.io/images/kmvatx6v/production/78c5cbc66dc3619f49a809a13ab6df6152ab093b-13333x7500.jpg?rect=1256,137,10645,7147&auto=format" alt="Dharmapura Research Lab Team — group photograph at MAHE Manipal" style="width: 100%; height: 380px; object-fit: cover; display: block;" loading="eager" />
+            </div>
+
+            <!-- Floating Announcement Badge -->
+            <div class="announcement-badge">
+              <div style="display: flex; align-items: center; gap: 0.4rem; color: var(--emerald-accent); margin-bottom: 0.25rem;">
+                <span class="material-symbols-outlined" style="font-size: 18px;">verified</span>
+                <span style="font-weight: 700; font-size: 0.85rem;">Announcement</span>
+              </div>
+              <p style="font-size: 0.825rem; color: var(--on-surface-variant); line-height: 1.45; margin: 0;">
+                Congratulations <strong>Dr. Sujana Chandrappa</strong> on your doctoral defense!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Frontiers (Bento Grid) -->
+    <section class="section-padding" style="background: var(--paper-white);" id="research-frontiers">
+      <div class="container">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; gap: 1rem;">
+          <div>
+            <span class="tag-label">EXPERTISE</span>
+            <h2 class="headline-lg">Research Frontiers</h2>
+          </div>
+          <p style="max-width: 440px; color: var(--on-surface-variant); font-size: 0.925rem;">
+            Pushing the boundaries of molecular engineering to solve global energy challenges through fundamental science.
+          </p>
+        </div>
+
+        <!-- Bento Layout -->
+        <div class="bento-grid">
+          <!-- Featured Large Bento Card -->
+          <div class="bento-card bento-card-lg group">
+            <img src="https://cdn.sanity.io/images/kmvatx6v/production/febb09772088d53293e16d1688579e74471a6ec9-13333x7500.png?rect=1667,157,9999,7343&auto=format" alt="Sustainable Energy Harvesting — solar panel and thin-film semiconductor research" loading="lazy" />
+            <div class="bento-overlay">
+              <span class="badge badge-achievement" style="align-self: flex-start; margin-bottom: 1rem;">Lead Initiative</span>
+              <h3 class="headline-lg" style="color: white; margin-bottom: 0.75rem;">Sustainable Energy Harvesting</h3>
+              <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; max-width: 600px; margin-bottom: 1.25rem;">
+                Rationally tuning properties of thin-film semiconductors and perovskites for next-generation solar fuels and PV technology.
+              </p>
+              <a href="../../pages/research/index.html" style="color: white; font-weight: 700; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+                Read Full Abstract <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Top Bento Card -->
+          <div class="bento-card bento-card-sm">
+            <img src="https://cdn.sanity.io/images/kmvatx6v/production/3c3b8d70f95720ad47ba6e82c902cd5b36731ceb-4956x4974.png?auto=format" alt="Nanostructure Engineering — carbon nitride synthesis microscopy" loading="lazy" />
+            <div class="bento-overlay">
+              <!-- Fixed: was h4 (skipped h3), now h3 for correct hierarchy -->
+              <h3 class="headline-md" style="color: white;">Nanostructure Engineering</h3>
+              <p style="color: rgba(255,255,255,0.8); font-size: 0.825rem; margin-top: 0.25rem;">
+                Synthesis and optical characterization of carbon nitrides and oxide interfaces.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Bottom Bento Card -->
+          <div class="bento-card bento-card-sm">
+            <img src="https://cdn.sanity.io/images/kmvatx6v/production/7215030257e30b57aee9f9107753577175fd4614-5772x2905.png?auto=format" alt="Functional Materials — time-resolved spectroscopy exciton dynamics" loading="lazy" />
+            <div class="bento-overlay">
+              <!-- Fixed: was h4, now h3 -->
+              <h3 class="headline-md" style="color: white;">Functional Materials</h3>
+              <p style="color: rgba(255,255,255,0.8); font-size: 0.825rem; margin-top: 0.25rem;">
+                Time-resolved spectroscopy to probe exciton dynamics and charge carriers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent News & Milestones -->
+    <section class="section-padding" style="background: var(--bg-surface-low); border-top: 1px solid var(--subtle-border); border-bottom: 1px solid var(--subtle-border);" id="news">
+      <div class="container">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-bottom: 3rem; gap: 1rem;">
+          <div>
+            <h2 class="headline-lg">Recent News &amp; Milestones</h2>
+            <div style="height: 3px; width: 48px; background: var(--secondary); border-radius: 99px; margin-top: 0.5rem;"></div>
+          </div>
+          <a href="../../pages/publications/index.html" style="color: var(--secondary); font-weight: 700; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+            Access Lab Publications <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+          </a>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <!-- News 1 -->
+          <article class="news-card">
+            <div class="news-date">
+              <div class="news-date-day">2027</div>
+              <div class="news-date-year">GRANT AWARD</div>
+            </div>
+            <div style="flex: 1;">
+              <span class="badge badge-achievement">Achievement</span>
+              <p style="color: var(--slate-heading); font-size: 1rem; margin: 0.25rem 0 0;">
+                <strong>Deepu Maregowda</strong> has been awarded a highly competitive and prestigious <strong>Ernst Mach Grant-worldwide</strong> from OeAD Austria. She will be visiting <strong>TU Leoben</strong> for in situ experiments.
+              </p>
+            </div>
+            <span class="material-symbols-outlined" style="color: var(--secondary);" aria-hidden="true">chevron_right</span>
+          </article>
+
+          <!-- News 2 -->
+          <article class="news-card">
+            <div class="news-date">
+              <div class="news-date-day">2026</div>
+              <div class="news-date-year">PAPER DEFENSE</div>
+            </div>
+            <div style="flex: 1;">
+              <span class="badge badge-seminar">PhD Defense</span>
+              <p style="color: var(--slate-heading); font-size: 1rem; margin: 0.25rem 0 0;">
+                <strong>Simon Joyson Galbao</strong> has submitted his PhD thesis for evaluation, marking the final step toward the award of his doctoral degree.
+              </p>
+            </div>
+            <span class="material-symbols-outlined" style="color: var(--secondary);" aria-hidden="true">chevron_right</span>
+          </article>
+
+          <!-- News 3 -->
+          <article class="news-card">
+            <div class="news-date">
+              <div class="news-date-day">2026</div>
+              <div class="news-date-year">JOURNAL PUB</div>
+            </div>
+            <div style="flex: 1;">
+              <span class="badge badge-publication">Publication</span>
+              <p style="color: var(--slate-heading); font-size: 1rem; margin: 0.25rem 0 0;">
+                Simon and team published <em>"Demystifying the interplay between extended π-conjugation and nitrogen vacancies on photocatalytic H<sub>2</sub> evolution in copolymerized carbon nitride"</em> in <strong>Materials Chemistry Frontiers</strong>.
+              </p>
+            </div>
+            <span class="material-symbols-outlined" style="color: var(--secondary);" aria-hidden="true">article</span>
+          </article>
+
+          <!-- News 4 -->
+          <article class="news-card">
+            <div class="news-date">
+              <div class="news-date-day">2025</div>
+              <div class="news-date-year">AWARD</div>
+            </div>
+            <div style="flex: 1;">
+              <span class="badge badge-award">Award</span>
+              <p style="color: var(--slate-heading); font-size: 1rem; margin: 0.25rem 0 0;">
+                <strong>Sujana Chandrappa</strong> secured the <strong>Best Poster Award</strong> at the 12<sup>th</sup> ICMAT 2025 in Singapore organized by MRS Singapore.
+              </p>
+            </div>
+            <span class="material-symbols-outlined" style="color: var(--secondary);" aria-hidden="true">workspace_premium</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Research Family / Team Preview -->
+    <section class="section-padding" style="background: var(--paper-white);" id="team">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3.5rem; align-items: center;">
+          <div>
+            <span class="tag-label">COLLABORATION</span>
+            <h2 class="headline-lg" style="margin-bottom: 1.25rem;">Our Research Family</h2>
+            <p style="color: var(--on-surface-variant); font-size: 0.95rem; margin-bottom: 2rem; line-height: 1.65;">
+              The Dharmapura Lab thrives on a culture of intellectual curiosity and collaborative rigor. Our members come from diverse backgrounds to tackle complex material challenges.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--subtle-border); padding-bottom: 0.75rem;">
+                <span style="font-weight: 600; color: var(--slate-heading);">Principal Investigator</span>
+                <span style="color: var(--secondary); font-weight: 600;">Dr. Murthy D.</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--subtle-border); padding-bottom: 0.75rem;">
+                <span style="font-weight: 600; color: var(--slate-heading);">Graduate Students</span>
+                <span style="color: var(--secondary); font-weight: 600;">5 Members</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--subtle-border); padding-bottom: 0.75rem;">
+                <span style="font-weight: 600; color: var(--slate-heading);">Research Associates</span>
+                <span style="color: var(--secondary); font-weight: 600;">1 Postdoc</span>
+              </div>
+            </div>
+
+            <a href="../../pages/members/index.html" class="btn-primary">
+              Meet the Entire Team <span class="material-symbols-outlined" style="font-size: 18px;">groups</span>
+            </a>
+          </div>
+
+          <div>
+            <div style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--academic-shadow); border: 8px solid var(--paper-white);">
+              <img src="https://cdn.sanity.io/images/kmvatx6v/production/752c6a550edc5ead352f8d37d5605f6e815bed13-13333x7500.jpg?auto=format" alt="Lab Retreat Group Photo — Dharmapura Lab team at MAHE Manipal" style="width: 100%; height: 320px; object-fit: cover; display: block;" loading="lazy" />
+            </div>
+
+            <!-- Stats Bar -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
+              <div style="background: var(--bg-surface-low); padding: 1.5rem; border-radius: var(--radius-lg); text-align: center; border: 1px solid var(--subtle-border);">
+                <div class="headline-lg text-accent-secondary" style="font-style: italic; font-size: 2.25rem;">15+</div>
+                <!-- Fixed: was 'uppercase;' (invalid), now valid CSS with text-transform -->
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--slate-heading); letter-spacing: 0.08em;">ACTIVE RESEARCHERS</div>
+              </div>
+              <div style="background: var(--slate-heading); color: white; padding: 1.5rem; border-radius: var(--radius-lg); text-align: center;">
+                <div class="headline-lg text-emerald" style="font-style: italic; font-size: 2.25rem;">45+</div>
+                <!-- Fixed: was 'uppercase;' (invalid) -->
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: rgba(255,255,255,0.7); letter-spacing: 0.08em;">JOURNAL PUBLICATIONS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Collaboration Section (High Contrast Dark Card) -->
+    <section class="section-padding contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div>
+            <span class="tag-label" style="color: var(--emerald-accent); border-color: var(--emerald-accent);">GET IN TOUCH</span>
+            <h2 class="display-lg" style="color: white; margin-bottom: 2rem;">Collaborate with our Research Group</h2>
+
+            <div style="margin-bottom: 2.5rem; border-left: 2px solid rgba(255,255,255,0.2); padding-left: 1.5rem;">
+              <h3 class="headline-md" style="color: var(--emerald-accent); margin-bottom: 0.25rem;">Dr. Murthy Dharmapura</h3>
+              <p style="color: rgba(255,255,255,0.8); font-style: italic; margin-bottom: 0.25rem;">Associate Professor, Department of Chemistry</p>
+              <p style="color: rgba(255,255,255,0.5); font-size: 0.875rem;">Coordinator, Center for Renewable Energy</p>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+              <a href="mailto:murthy.dharmapura@manipal.edu" style="display: flex; align-items: center; gap: 1rem; color: white;">
+                <span class="material-symbols-outlined" style="background: rgba(255,255,255,0.1); padding: 0.75rem; border-radius: var(--radius-md);" aria-hidden="true">mail</span>
+                <span style="font-weight: 600;">murthy.dharmapura@manipal.edu</span>
+              </a>
+
+              <div style="display: flex; align-items: flex-start; gap: 1rem; color: rgba(255,255,255,0.85);">
+                <span class="material-symbols-outlined" style="background: rgba(255,255,255,0.1); padding: 0.75rem; border-radius: var(--radius-md);" aria-hidden="true">location_on</span>
+                <span style="font-size: 0.9rem; line-height: 1.5;">
+                  Manipal Institute of Technology,<br>
+                  Manipal Academy of Higher Education (MAHE),<br>
+                  Manipal, Karnataka, India - 576104
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Inquiry Form -->
+          <div class="form-card" id="form-container">
+            <h3 class="headline-md" style="color: white; margin-bottom: 0.5rem;">Inquiry Form</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-bottom: 1.5rem;">
+              Send a direct research collaboration, student position, or academic inquiry to Dr. Murthy.
+            </p>
+
+            <form id="inquiry-form" novalidate style="display: flex; flex-direction: column; gap: 1.25rem;" aria-label="Inquiry form">
+              <!-- Honeypot field — bots fill this, humans don't see it -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="hp-website">Website (leave blank)</label>
+                <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="form-group" style="margin: 0;">
+                  <label class="form-label" for="first-name">First Name *</label>
+                  <input type="text" id="first-name" name="first-name" class="form-input" placeholder="John" required maxlength="60" autocomplete="given-name" />
+                </div>
+                <div class="form-group" style="margin: 0;">
+                  <label class="form-label" for="last-name">Last Name *</label>
+                  <input type="text" id="last-name" name="last-name" class="form-input" placeholder="Doe" required maxlength="60" autocomplete="family-name" />
+                </div>
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="email">Institutional Email *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="john@university.edu" required maxlength="120" autocomplete="email" />
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="subject">Inquiry Subject *</label>
+                <select id="subject" name="subject" class="form-select" required>
+                  <option value="" disabled selected>Select an Inquiry Subject...</option>
+                  <option value="Research Collaboration">Research Collaboration Proposal</option>
+                  <option value="PhD Admission Inquiry">Ph.D. Admission / GATE Scholar Inquiry</option>
+                  <option value="Postdoctoral Opportunity">Postdoctoral Fellowship Inquiry</option>
+                  <option value="Equipment or Facility Access">Facility / Equipment Access</option>
+                  <option value="General Question">General Academic Question</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin: 0;">
+                <label class="form-label" for="message">Message *</label>
+                <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Describe your research background, collaboration interest, or query in detail..." required maxlength="2000"></textarea>
+              </div>
+
+              <div id="form-error-msg" role="alert" aria-live="assertive" style="display:none; color: #fca5a5; font-size: 0.875rem; padding: 0.5rem 0;"></div>
+
+              <button type="submit" id="submit-btn" class="btn-submit">
+                <span id="btn-text">Submit Collaboration Request</span>
+                <span id="btn-spinner" style="display: none;" class="material-symbols-outlined spin" aria-hidden="true">progress_activity</span>
+              </button>
+            </form>
+
+            <!-- Success Banner (Hidden by default) -->
+            <div id="success-banner" class="form-success-banner" style="display: none;" role="status" aria-live="polite">
+              <div style="display: flex; justify-content: center; align-items: center; width: 52px; height: 52px; background: rgba(16, 185, 129, 0.2); border-radius: 50%; margin: 0 auto 1rem;">
+                <span class="material-symbols-outlined" style="font-size: 32px; color: var(--emerald-accent);" aria-hidden="true">verified</span>
+              </div>
+              <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: white;">Inquiry Submitted Successfully!</h4>
+              <p id="success-msg" style="font-size: 0.875rem; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 1.25rem;"></p>
+              <button type="button" id="reset-form-btn" class="btn-secondary-outline" style="color: white; border-color: rgba(255,255,255,0.3); padding: 0.5rem 1.25rem; font-size: 0.8rem;">
+                Send Another Message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer -->
+  <footer id="site-footer"></footer>
+
+  <!-- Shared Navigation & Script -->
+  <script src="../../design-system/shared-nav.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var form        = document.getElementById('inquiry-form');
+      var submitBtn   = document.getElementById('submit-btn');
+      var btnText     = document.getElementById('btn-text');
+      var btnSpinner  = document.getElementById('btn-spinner');
+      var successBanner = document.getElementById('success-banner');
+      var successMsg  = document.getElementById('success-msg');
+      var resetBtn    = document.getElementById('reset-form-btn');
+      var errorMsg    = document.getElementById('form-error-msg');
+      var honeypot    = document.getElementById('hp-website');
+
+      // --- Security: safe text encoder (prevents XSS in DOM) ---
+      function safeText(str) {
+        var d = document.createElement('span');
+        d.textContent = str;
+        return d.textContent; // just for use in textContent assignments
+      }
+
+      // --- Email format validation (basic sanity check beyond type="email") ---
+      function isValidEmail(email) {
+        // Must have @, a domain with at least one dot, min 6 chars total
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        return re.test(email) && email.length >= 6;
+      }
+
+      // --- Name validation: letters, spaces, hyphens, apostrophes only ---
+      function isValidName(name) {
+        return /^[A-Za-zÀ-ÿ' \-]{1,60}$/.test(name);
+      }
+
+      function showError(msg) {
+        errorMsg.textContent = msg;
+        errorMsg.style.display = 'block';
+      }
+
+      function clearError() {
+        errorMsg.textContent = '';
+        errorMsg.style.display = 'none';
+      }
+
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          clearError();
+
+          // --- Honeypot check: if filled, silently reject ---
+          if (honeypot && honeypot.value.trim() !== '') {
+            // Bot detected — fake success without storing
+            form.style.display = 'none';
+            successMsg.textContent = 'Thank you for your message!';
+            successBanner.style.display = 'block';
+            return;
+          }
+
+          // Collect values
+          var firstName = document.getElementById('first-name').value.trim();
+          var lastName  = document.getElementById('last-name').value.trim();
+          var email     = document.getElementById('email').value.trim();
+          var subject   = document.getElementById('subject').value;
+          var message   = document.getElementById('message').value.trim();
+
+          // --- Validate all fields ---
+          if (!firstName || !lastName || !email || !subject || !message) {
+            showError('Please fill out all required fields.');
+            return;
+          }
+          if (!isValidName(firstName) || !isValidName(lastName)) {
+            showError('Name fields may only contain letters, spaces, hyphens, and apostrophes.');
+            return;
+          }
+          if (!isValidEmail(email)) {
+            showError('Please enter a valid institutional email address (e.g. name@university.edu).');
+            return;
+          }
+          var allowedSubjects = [
+            'Research Collaboration',
+            'PhD Admission Inquiry',
+            'Postdoctoral Opportunity',
+            'Equipment or Facility Access',
+            'General Question'
+          ];
+          if (allowedSubjects.indexOf(subject) === -1) {
+            showError('Please select a valid inquiry subject from the list.');
+            return;
+          }
+          if (message.length < 20) {
+            showError('Please provide a more detailed message (at least 20 characters).');
+            return;
+          }
+
+          // UI Loading state
+          submitBtn.disabled = true;
+          btnText.textContent = 'Submitting Request...';
+          if (btnSpinner) btnSpinner.style.display = 'inline-block';
+
+          // Simulate processing & save submission locally
+          setTimeout(function() {
+            // --- Safe data object (no raw HTML) ---
+            var submissionData = {
+              id: 'INQ-' + Date.now(),
+              name: firstName + ' ' + lastName,
+              email: email,
+              subject: subject,
+              message: message,
+              timestamp: new Date().toISOString()
+            };
+
+            // Store in LocalStorage (sanitized strings only — no HTML)
+            try {
+              var existing = JSON.parse(localStorage.getItem('dhkmurthy_inquiries') || '[]');
+              if (!Array.isArray(existing)) { existing = []; }
+              existing.push(submissionData);
+              // Limit stored entries to 50
+              if (existing.length > 50) { existing = existing.slice(-50); }
+              localStorage.setItem('dhkmurthy_inquiries', JSON.stringify(existing));
+            } catch (err) {
+              console.warn('LocalStorage unavailable:', err);
+            }
+
+            // Show success state — using textContent (XSS-safe, no innerHTML with user data)
+            form.style.display = 'none';
+            // Build success message safely using DOM API
+            var msgEl = document.getElementById('success-msg');
+            msgEl.innerHTML = ''; // clear first
+            var txt = document.createTextNode('Thank you, ');
+            var bold1 = document.createElement('strong');
+            bold1.textContent = firstName;
+            var txt2 = document.createTextNode('! Your inquiry regarding ');
+            var em = document.createElement('em');
+            em.textContent = '"' + subject + '"';
+            var txt3 = document.createTextNode(' has been dispatched. Dr. Murthy will reply to ');
+            var bold2 = document.createElement('strong');
+            bold2.textContent = email;
+            var txt4 = document.createTextNode('.');
+            msgEl.appendChild(txt);
+            msgEl.appendChild(bold1);
+            msgEl.appendChild(txt2);
+            msgEl.appendChild(em);
+            msgEl.appendChild(txt3);
+            msgEl.appendChild(bold2);
+            msgEl.appendChild(txt4);
+
+            successBanner.style.display = 'block';
+
+            // Reset button state
+            submitBtn.disabled = false;
+            btnText.textContent = 'Submit Collaboration Request';
+            if (btnSpinner) btnSpinner.style.display = 'none';
+          }, 600);
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function() {
+          form.reset();
+          clearError();
+          successBanner.style.display = 'none';
+          form.style.display = 'flex';
+          document.getElementById('first-name').focus();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

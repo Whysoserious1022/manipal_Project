@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery — Dharmapura Lab | MIT Manipal</title>
+  <meta name="description" content="Photo gallery of Murthy Dharmapura's semiconductor research lab at MIT Manipal — lab activities, conferences, and team photos."/>
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://cdn.sanity.io data:; connect-src 'none'; frame-ancestors 'none';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+
+  <link rel="stylesheet" href="../../design-system/academic-chic.css"/>
+  <style>
+    .gallery-grid-academic {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .gallery-card {
+      background: var(--paper-white);
+      border: 1px solid var(--subtle-border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--academic-shadow);
+      aspect-ratio: 4/3;
+      cursor: zoom-in;
+      position: relative;
+      transition: all 0.35s ease;
+    }
+    .gallery-card:hover,
+    .gallery-card:focus-within {
+      transform: translateY(-4px);
+      box-shadow: var(--academic-shadow-hover);
+      border-color: rgba(0, 108, 74, 0.3);
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      pointer-events: none;
+    }
+    .gallery-card:hover img,
+    .gallery-card:focus-within img {
+      transform: scale(1.05);
+    }
+    .gallery-caption-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(30, 41, 59, 0.85) 100%);
+      color: white;
+      padding: 1rem;
+      display: flex;
+      align-items: flex-end;
+      font-size: 0.85rem;
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-card:hover .gallery-caption-overlay,
+    .gallery-card:focus-within .gallery-caption-overlay {
+      opacity: 1;
+    }
+    /* Lightbox nav buttons */
+    .lightbox-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 52px;
+      height: 52px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease;
+      z-index: 1001;
+    }
+    .lightbox-nav-btn:hover { background: rgba(255, 255, 255, 0.3); }
+    .lightbox-nav-btn.prev { left: 1rem; }
+    .lightbox-nav-btn.next { right: 1rem; }
+    @media (max-width: 600px) {
+      .lightbox-nav-btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="site-header"></header>
+
+  <main id="main-content">
+    <section class="section-padding" style="background: var(--bg-surface-low); padding-top: 8.5rem;">
+      <div class="container">
+        <span class="tag-label">MEDIA &amp; MEMORIES</span>
+        <h1 class="display-lg" style="margin-bottom: 0.75rem;">Photo Gallery</h1>
+        <p style="color: var(--on-surface-variant); font-size: 0.95rem; max-width: 600px; margin-bottom: 2rem;">
+          Moments from our laboratory research, conferences, international trips, and group retreats. Click any image to launch full-screen view.
+        </p>
+        <p style="font-size: 0.8rem; color: var(--on-surface-variant); margin-bottom: 1.5rem;">
+          <span class="material-symbols-outlined" style="font-size: 16px; vertical-align: middle;">keyboard</span>
+          Tip: Use <kbd style="background: var(--bg-surface-container); border: 1px solid var(--subtle-border); border-radius: 4px; padding: 1px 5px;">←</kbd>
+          <kbd style="background: var(--bg-surface-container); border: 1px solid var(--subtle-border); border-radius: 4px; padding: 1px 5px;">→</kbd>
+          to navigate, <kbd style="background: var(--bg-surface-container); border: 1px solid var(--subtle-border); border-radius: 4px; padding: 1px 5px;">Esc</kbd> to close.
+        </p>
+
+        <div class="gallery-grid-academic" id="gallery-grid" role="list">
+
+          <div class="gallery-card" role="listitem" tabindex="0"
+               data-index="0"
+               data-src="https://cdn.sanity.io/images/kmvatx6v/production/febb09772088d53293e16d1688579e74471a6ec9-13333x7500.png?rect=1667,157,9999,7343&auto=format"
+               data-title="Research Facility &amp; Setup">
+            <img src="https://cdn.sanity.io/images/kmvatx6v/production/febb09772088d53293e16d1688579e74471a6ec9-13333x7500.png?rect=1667,157,9999,7343&auto=format&w=500"
+                 alt="Research Facility and Setup — Dharmapura Lab equipment at MIT Manipal" loading="lazy" />
+            <div class="gallery-caption-overlay" aria-hidden="true">Research Facility &amp; Setup</div>
+          </div>
+
+          <div class="gallery-card" role="listitem" tabindex="0"
+               data-index="1"
+               data-src="https://cdn.sanity.io/images/kmvatx6v/production/5f4abe442d6075ab171caa278d6587e5a4b27db3-3242x1795.jpg?auto=format"
+               data-title="Laboratory Experimentation">
+            <img src="https://cdn.sanity.io/images/kmvatx6v/production/5f4abe442d6075ab171caa278d6587e5a4b27db3-3242x1795.jpg?auto=format&w=500"
+                 alt="Laboratory Experimentation — researchers conducting experiments in the Dharmapura Lab" loading="lazy" />
+            <div class="gallery-caption-overlay" aria-hidden="true">Laboratory Experimentation</div>
+          </div>
+
+          <div class="gallery-card" role="listitem" tabindex="0"
+               data-index="2"
+               data-src="https://cdn.sanity.io/images/kmvatx6v/production/893e2c91fac6068420e036d14072394b157c0f1d-4096x3072.jpg?rect=449,154,3319,2463&auto=format"
+               data-title="Synthesis Workstation">
+            <img src="https://cdn.sanity.io/images/kmvatx6v/production/893e2c91fac6068420e036d14072394b157c0f1d-4096x3072.jpg?rect=449,154,3319,2463&auto=format&w=500"
+                 alt="Synthesis Workstation — chemical vapor deposition and spray pyrolysis setup" loading="lazy" />
+            <div class="gallery-caption-overlay" aria-hidden="true">Synthesis Workstation</div>
+          </div>
+
+          <div class="gallery-card" role="listitem" tabindex="0"
+               data-index="3"
+               data-src="https://cdn.sanity.io/images/kmvatx6v/production/610e4b88500390cf65faca1cd68d4c21c7f9e786-4096x2967.jpg?auto=format"
+               data-title="Optical Characterization">
+            <img src="https://cdn.sanity.io/images/kmvatx6v/production/610e4b88500390cf65faca1cd68d4c21c7f9e786-4096x2967.jpg?auto=format&w=500"
+                 alt="Optical Characterization — spectroscopy instruments measuring semiconductor properties" loading="lazy" />
+            <div class="gallery-caption-overlay" aria-hidden="true">Optical Characterization</div>
+          </div>
+
+          <div class="gallery-card" role="listitem" tabindex="0"
+               data-index="4"
+               data-src="https://cdn.sanity.io/images/kmvatx6v/production/78c5cbc66dc3619f49a809a13ab6df6152ab093b-13333x7500.jpg?rect=1256,137,10645,7147&auto=format"
+               data-title="Dharmapura Lab Team Portrait">
+            <img src="https://cdn.sanity.io/images/kmvatx6v/production/78c5cbc66dc3619f49a809a13ab6df6152ab093b-13333x7500.jpg?rect=1256,137,10645,7147&auto=format&w=500"
+                 alt="Dharmapura Lab Team Portrait — group photograph of all lab members" loading="lazy" />
+            <div class="gallery-caption-overlay" aria-hidden="true">Dharmapura Lab Team Portrait</div>
+          </div>
+
+          <div class="gallery-card" role="listitem" tabindex="0"
+               data-index="5"
+               data-src="https://cdn.sanity.io/images/kmvatx6v/production/752c6a550edc5ead352f8d37d5605f6e815bed13-13333x7500.jpg?auto=format"
+               data-title="Lab Retreat &amp; Celebration">
+            <img src="https://cdn.sanity.io/images/kmvatx6v/production/752c6a550edc5ead352f8d37d5605f6e815bed13-13333x7500.jpg?auto=format&w=500"
+                 alt="Lab Retreat and Celebration — Dharmapura Lab group outing and celebration event" loading="lazy" />
+            <div class="gallery-caption-overlay" aria-hidden="true">Lab Retreat &amp; Celebration</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close image viewer">
+      <span class="material-symbols-outlined" style="font-size: 28px;" aria-hidden="true">close</span>
+    </button>
+    <button class="lightbox-nav-btn prev" id="lightbox-prev" aria-label="Previous image">
+      <span class="material-symbols-outlined" style="font-size: 28px;" aria-hidden="true">chevron_left</span>
+    </button>
+    <div style="position: relative; display: flex; flex-direction: column; align-items: center; max-width: 90vw;">
+      <img src="" alt="" class="lightbox-content" id="lightbox-img" />
+      <div class="lightbox-caption" id="lightbox-caption" aria-live="polite"></div>
+    </div>
+    <button class="lightbox-nav-btn next" id="lightbox-next" aria-label="Next image">
+      <span class="material-symbols-outlined" style="font-size: 28px;" aria-hidden="true">chevron_right</span>
+    </button>
+  </div>
+
+  <footer id="site-footer"></footer>
+
+  <script src="../../design-system/shared-nav.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var cards     = Array.from(document.querySelectorAll('.gallery-card'));
+      var modal     = document.getElementById('lightbox-modal');
+      var modalImg  = document.getElementById('lightbox-img');
+      var caption   = document.getElementById('lightbox-caption');
+      var closeBtn  = document.getElementById('lightbox-close');
+      var prevBtn   = document.getElementById('lightbox-prev');
+      var nextBtn   = document.getElementById('lightbox-next');
+      var currentIndex = 0;
+
+      // Allowed CDN origin for security
+      var ALLOWED_ORIGIN = 'cdn.sanity.io';
+
+      function isSafeUrl(url) {
+        try {
+          var parsed = new URL(url);
+          return (parsed.protocol === 'https:' && parsed.hostname === ALLOWED_ORIGIN);
+        } catch(e) {
+          return false;
+        }
+      }
+
+      function openLightbox(index) {
+        var card = cards[index];
+        if (!card) return;
+        var src   = card.getAttribute('data-src') || '';
+        var title = card.getAttribute('data-title') || '';
+
+        // Security: only load from trusted CDN
+        if (!isSafeUrl(src)) {
+          console.warn('Blocked unsafe lightbox src:', src);
+          return;
+        }
+
+        currentIndex = index;
+        modalImg.src = src;
+        modalImg.alt = card.querySelector('img').alt || title;
+        // Decode HTML entities for caption text
+        var tmpDiv = document.createElement('div');
+        tmpDiv.innerHTML = title;
+        caption.textContent = tmpDiv.textContent || tmpDiv.innerText || '';
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+      }
+
+      function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        modalImg.src = '';
+        modalImg.alt = '';
+        caption.textContent = '';
+        // Return focus to the last opened card
+        if (cards[currentIndex]) { cards[currentIndex].focus(); }
+      }
+
+      function prevImage() {
+        var newIndex = (currentIndex - 1 + cards.length) % cards.length;
+        openLightbox(newIndex);
+      }
+
+      function nextImage() {
+        var newIndex = (currentIndex + 1) % cards.length;
+        openLightbox(newIndex);
+      }
+
+      // Open lightbox on click
+      cards.forEach(function(card) {
+        card.addEventListener('click', function() {
+          var idx = parseInt(card.getAttribute('data-index'), 10);
+          openLightbox(idx);
+        });
+        // Allow Enter/Space key on focused card
+        card.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            var idx = parseInt(card.getAttribute('data-index'), 10);
+            openLightbox(idx);
+          }
+        });
+      });
+
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (prevBtn)  prevBtn.addEventListener('click', prevImage);
+      if (nextBtn)  nextBtn.addEventListener('click', nextImage);
+
+      // Close when clicking outside the image
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) closeModal();
+        });
+      }
+
+      // Keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        if (!modal.classList.contains('active')) return;
+        switch(e.key) {
+          case 'Escape':     closeModal(); break;
+          case 'ArrowLeft':  prevImage();  break;
+          case 'ArrowRight': nextImage();  break;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
