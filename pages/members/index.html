@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Members — Dharmapura Lab | MIT Manipal</title>
-  <meta name="description" content="Meet the Principal Investigator and lab members of Murthy Dharmapura's research group at MIT Manipal."/>
+  <title>Members — Device Fabrication and Characterization Lab (DFCL) | MIT Manipal</title>
+  <meta name="description" content="Meet the faculty, research scientists, and graduate scholars at Device Fabrication and Characterization Lab (DFCL), MIT Manipal."/>
 
   <!-- Security Headers -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://cdn.sanity.io data:; connect-src 'none'; frame-ancestors 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https://cdn.sanity.io https://api.dicebear.com data:; connect-src 'none'; frame-ancestors 'none';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
   <link rel="stylesheet" href="../../design-system/academic-chic.css"/>
   <style>
     .member-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1.75rem;
       margin-top: 1.5rem;
     }
     .member-profile-card {
@@ -29,25 +29,19 @@
       overflow: hidden;
       box-shadow: var(--academic-shadow);
       transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
     }
     .member-profile-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
       box-shadow: var(--academic-shadow-hover);
-      border-color: rgba(0,108,74,0.3);
-    }
-    .member-img-wrap {
-      width: 100%;
-      height: 280px;
-      overflow: hidden;
-      position: relative;
-    }
-    .member-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      border-color: rgba(0,108,74,0.35);
     }
     .member-body {
-      padding: 1.25rem;
+      padding: 1.35rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
     .member-name {
       font-family: var(--font-serif);
@@ -57,7 +51,7 @@
       margin-bottom: 0.25rem;
     }
     .member-role {
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -67,8 +61,20 @@
     .member-info-item {
       font-size: 0.85rem;
       color: var(--on-surface-variant);
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.45rem;
       line-height: 1.45;
+    }
+    .member-tag-chip {
+      display: inline-block;
+      background: var(--bg-surface-low);
+      border: 1px solid var(--subtle-border);
+      border-radius: var(--radius-full);
+      padding: 0.2rem 0.6rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--slate-heading);
+      margin-top: auto;
+      margin-right: 0.3rem;
     }
   </style>
 </head>
@@ -77,145 +83,388 @@
   <header id="site-header"></header>
 
   <main id="main-content">
-    <!-- PI Hero Profile -->
-    <section class="section-padding" style="background: var(--bg-surface-low); padding-top: 8.5rem;" id="principal-investigator">
+    <!-- Header Section -->
+    <section class="section-padding" style="background: var(--bg-surface-low); padding-top: 8.5rem;">
       <div class="container">
-        <span class="tag-label">LEADERSHIP</span>
-        <h1 class="display-lg" style="margin-bottom: 2rem;">Principal Investigator</h1>
+        <span class="tag-label">RESEARCH FAMILY</span>
+        <h1 class="display-lg" style="margin-bottom: 1rem;">DFCL Team Members</h1>
+        <p style="font-size: 1.1rem; color: var(--on-surface-variant); max-width: 850px; line-height: 1.7;">
+          Meet the 13 dedicated faculty leaders, postdoctoral researchers, doctoral scholars, and graduate assistants working at the <strong>Device Fabrication and Characterization Lab (DFCL)</strong> on <em>Advanced Materials for Energy Storage and Sensors</em>.
+        </p>
+      </div>
+    </section>
 
-        <div style="background: var(--paper-white); border: 1px solid var(--subtle-border); border-radius: var(--radius-2xl); padding: 2.5rem; box-shadow: var(--academic-shadow);">
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; align-items: flex-start;">
+    <!-- Faculty & Research Leads -->
+    <section class="section-padding" style="background: var(--paper-white);" id="faculty-leads">
+      <div class="container">
+        <span class="tag-label">LAB LEADERSHIP</span>
+        <h2 class="headline-lg" style="margin-bottom: 2rem;">Faculty Leads &amp; Senior Scientists</h2>
 
-            <div style="border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--academic-shadow); max-width: 320px;">
-              <img src="https://cdn.sanity.io/images/kmvatx6v/production/aaeca709878e7fd7819ee5bbdfb3220dc9100c78-1422x1626.png?fit=max&auto=format&h=420"
-                   alt="Dr. Murthy Dharmapura — Associate Professor, Department of Chemistry, MIT Manipal"
-                   style="width: 100%; height: auto; display: block;" loading="eager" />
+        <div class="member-grid">
+          <!-- Member 1: Dr. Shounak De -->
+          <article class="member-profile-card">
+            <div class="member-avatar-container">
+              <svg class="avatar-svg-animated" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="85" fill="#e2e8f0" stroke="#006c4a" stroke-width="2"/>
+                <!-- Hair -->
+                <path d="M55,80 C55,45 145,45 145,80 C145,60 130,35 100,35 C70,35 55,60 55,80 Z" fill="#1e293b"/>
+                <!-- Face -->
+                <circle cx="100" cy="95" r="40" fill="#f6d5b8"/>
+                <path d="M60,95 C60,58 140,58 140,95 C140,75 130,50 100,50 C70,50 60,75 60,95 Z" fill="#2d3748"/>
+                <!-- Glasses -->
+                <rect x="75" y="85" width="20" height="14" rx="3" fill="none" stroke="#1e293b" stroke-width="3"/>
+                <rect x="105" y="85" width="20" height="14" rx="3" fill="none" stroke="#1e293b" stroke-width="3"/>
+                <line x1="95" y1="92" x2="105" y2="92" stroke="#1e293b" stroke-width="3"/>
+                <!-- Smile -->
+                <path d="M88,115 Q100,125 112,115" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+                <!-- Body / Suit -->
+                <path d="M40,195 Q100,145 160,195 Z" fill="#006c4a"/>
+                <!-- Tie -->
+                <polygon points="100,155 106,190 100,198 94,190" fill="#10b981"/>
+              </svg>
+              <span class="gender-badge gender-badge-male">Male Avatar</span>
             </div>
-
-            <div>
-              <h2 class="headline-lg" style="color: var(--slate-heading); margin-bottom: 0.25rem;">Dr. Murthy Dharmapura</h2>
-              <p style="color: var(--secondary); font-weight: 600; font-size: 0.95rem; margin-bottom: 1rem;">
-                Associate Professor, Department of Chemistry | Coordinator, Center for Renewable Energy
-              </p>
-
-              <p style="color: var(--on-surface-variant); font-size: 0.925rem; line-height: 1.65; margin-bottom: 1.5rem;">
-                Manipal Institute of Technology, Manipal Academy of Higher Education (MAHE), Manipal, Karnataka, India.<br>
-                <strong>Email:</strong> <a href="mailto:murthy.dharmapura@manipal.edu" style="color: var(--secondary);">murthy.dharmapura@manipal.edu</a>
-              </p>
-
-              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem;">
-                <!-- Fixed: added rel="noopener noreferrer" to all external links -->
-                <a href="https://scholar.google.com/citations?user=gzRK7awAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="btn-secondary-outline" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">Google Scholar</a>
-                <a href="https://www.linkedin.com/in/murthy-dharmapura-781300a5/" target="_blank" rel="noopener noreferrer" class="btn-secondary-outline" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">LinkedIn</a>
-                <a href="https://orcid.org/0000-0003-3462-7269" target="_blank" rel="noopener noreferrer" class="btn-secondary-outline" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">ORCID</a>
-                <a href="https://www.researchgate.net/profile/D-H-K-Murthy" target="_blank" rel="noopener noreferrer" class="btn-secondary-outline" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">ResearchGate</a>
+            <div class="member-body">
+              <div class="member-name">Dr. Shounak De</div>
+              <div class="member-role">Faculty Lead &amp; Principal Scientist</div>
+              <div class="member-info-item"><strong>Department:</strong> Microelectronics &amp; Device Physics</div>
+              <div class="member-info-item"><strong>Research Focus:</strong> Advanced Materials for Energy Storage Devices &amp; Solid-State Micro-Supercapacitors</div>
+              <div style="margin-top:auto; padding-top:0.75rem;">
+                <span class="member-tag-chip">Energy Storage</span>
+                <span class="member-tag-chip">Device Fab</span>
               </div>
             </div>
+          </article>
 
-          </div>
+          <!-- Member 2: Dr. Somashekara Bhat -->
+          <article class="member-profile-card">
+            <div class="member-avatar-container">
+              <svg class="avatar-svg-animated" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="85" fill="#e2e8f0" stroke="#006c4a" stroke-width="2"/>
+                <!-- Face -->
+                <circle cx="100" cy="95" r="40" fill="#f6d5b8"/>
+                <!-- Senior Hair -->
+                <path d="M60,75 C60,40 140,40 140,75 C140,55 125,32 100,32 C75,32 60,55 60,75 Z" fill="#475569"/>
+                <!-- Glasses -->
+                <circle cx="82" cy="92" r="11" fill="none" stroke="#1e293b" stroke-width="3"/>
+                <circle cx="118" cy="92" r="11" fill="none" stroke="#1e293b" stroke-width="3"/>
+                <line x1="93" y1="92" x2="107" y2="92" stroke="#1e293b" stroke-width="3"/>
+                <!-- Moustache & Smile -->
+                <path d="M85,110 Q100,118 115,110" fill="none" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+                <!-- Blazer -->
+                <path d="M35,195 Q100,140 165,195 Z" fill="#1e293b"/>
+                <polygon points="100,150 110,195 90,195" fill="#ffffff"/>
+              </svg>
+              <span class="gender-badge gender-badge-male">Male Avatar</span>
+            </div>
+            <div class="member-body">
+              <div class="member-name">Dr. Somashekara Bhat</div>
+              <div class="member-role">Professor &amp; Senior Academic Advisor</div>
+              <div class="member-info-item"><strong>Department:</strong> Materials Science &amp; Engineering</div>
+              <div class="member-info-item"><strong>Research Focus:</strong> Nanofabrication, Chemiresistive Gas Sensors, and Characterization Testbeds</div>
+              <div style="margin-top:auto; padding-top:0.75rem;">
+                <span class="member-tag-chip">Gas Sensors</span>
+                <span class="member-tag-chip">Thin Films</span>
+              </div>
+            </div>
+          </article>
 
-          <!-- Academic Bio Details -->
-          <div style="margin-top: 2.5rem; border-top: 1px solid var(--subtle-border); padding-top: 2rem;">
-            <h3 class="headline-md" style="margin-bottom: 1rem;">Education &amp; Academic Experience</h3>
-            <ul style="margin-left: 1.25rem; color: var(--on-surface-variant); font-size: 0.925rem; line-height: 1.8;">
-              <li><strong>Ph.D. in Chemical Engineering</strong> (Optoelectronic Materials), Delft University of Technology (TU Delft), Netherlands.</li>
-              <li><strong>Research Associate</strong>, Molecular Electronics Lab, Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR), Bengaluru, India.</li>
-              <li><strong>AIST Special Researcher</strong>, National Institute of Advanced Industrial Science and Technology (AIST), Tsukuba &amp; Tokyo University, Japan.</li>
-              <li><strong>Research Fellow</strong>, School of Electrical and Electronic Engineering, Nanyang Technological University (NTU), Singapore.</li>
-            </ul>
-          </div>
+          <!-- Member 3: Dr. Shailendra Kumar Tiwari -->
+          <article class="member-profile-card">
+            <div class="member-avatar-container">
+              <svg class="avatar-svg-animated" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="85" fill="#eef2f7" stroke="#10b981" stroke-width="2"/>
+                <circle cx="100" cy="95" r="39" fill="#f5d0b0"/>
+                <path d="M60,82 C60,50 140,50 140,82 C140,65 128,40 100,40 C72,40 60,65 60,82 Z" fill="#0f172a"/>
+                <!-- Eyes & Beard -->
+                <circle cx="83" cy="92" r="4" fill="#0f172a"/>
+                <circle cx="117" cy="92" r="4" fill="#0f172a"/>
+                <path d="M78,108 Q100,130 122,108 Q100,122 78,108 Z" fill="#334155"/>
+                <!-- Coat -->
+                <path d="M40,195 Q100,145 160,195 Z" fill="#047857"/>
+              </svg>
+              <span class="gender-badge gender-badge-male">Male Avatar</span>
+            </div>
+            <div class="member-body">
+              <div class="member-name">Dr. Shailendra Kumar Tiwari</div>
+              <div class="member-role">Postdoctoral Research Associate</div>
+              <div class="member-info-item"><strong>DFCL Lab:</strong> Energy Storage &amp; Battery Materials</div>
+              <div class="member-info-item"><strong>Research Focus:</strong> 2D MXenes &amp; Graphene Composites for High-Rate Sodium-Ion Batteries</div>
+              <div style="margin-top:auto; padding-top:0.75rem;">
+                <span class="member-tag-chip">Na-Ion Batteries</span>
+                <span class="member-tag-chip">2D MXenes</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Member 4: Dr. Arjun Sunil Rao -->
+          <article class="member-profile-card">
+            <div class="member-avatar-container">
+              <svg class="avatar-svg-animated" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="85" fill="#eef2f7" stroke="#10b981" stroke-width="2"/>
+                <circle cx="100" cy="95" r="39" fill="#f3cb9e"/>
+                <path d="M58,85 C58,45 142,45 142,85 Q125,50 100,50 Q75,50 58,85 Z" fill="#1e293b"/>
+                <circle cx="83" cy="92" r="4" fill="#1e293b"/>
+                <circle cx="117" cy="92" r="4" fill="#1e293b"/>
+                <path d="M86,114 Q100,124 114,114" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+                <path d="M38,195 Q100,145 162,195 Z" fill="#1e293b"/>
+              </svg>
+              <span class="gender-badge gender-badge-male">Male Avatar</span>
+            </div>
+            <div class="member-body">
+              <div class="member-name">Dr. Arjun Sunil Rao</div>
+              <div class="member-role">Research Scientist &amp; Device Specialist</div>
+              <div class="member-info-item"><strong>DFCL Lab:</strong> Smart Sensor Microfabrication</div>
+              <div class="member-info-item"><strong>Research Focus:</strong> Ultra-sensitive Flexible Electrochemical Sensors for Environmental Monitoring</div>
+              <div style="margin-top:auto; padding-top:0.75rem;">
+                <span class="member-tag-chip">Flexible Sensors</span>
+                <span class="member-tag-chip">Biosensors</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Lab Members Grid -->
-    <section class="section-padding" style="background: var(--paper-white);" id="lab-members">
+    <!-- Doctoral Scholars & Research Scholars -->
+    <section class="section-padding" style="background: var(--bg-surface-low); border-top: 1px solid var(--subtle-border);" id="phd-scholars">
       <div class="container">
-        <span class="tag-label">TEAM MEMBERS</span>
-        <h2 class="headline-lg" style="margin-bottom: 2rem;">Graduate Scholars &amp; Researchers</h2>
+        <span class="tag-label">DOCTORAL SCHOLARS</span>
+        <h2 class="headline-lg" style="margin-bottom: 2rem;">Ph.D. Scholars &amp; Research Fellows</h2>
 
         <div class="member-grid">
-          <!-- Member 1: Simon -->
+          <!-- Member 5: Mr. Shrivathsa V S -->
           <article class="member-profile-card">
-            <div class="member-img-wrap">
-              <img src="https://cdn.sanity.io/images/kmvatx6v/production/a877a44ff5dc93ddcfe6398dd73efacff64ff804-211x260.jpg?fit=max&auto=format"
-                   alt="Simon Joyson Galbao — PhD Scholar at Dharmapura Lab" loading="lazy" />
+            <div class="member-avatar-container">
+              <svg class="avatar-svg-animated" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="85" fill="#ffffff" stroke="#006c4a" stroke-width="2"/>
+                <circle cx="100" cy="95" r="38" fill="#f6d5b8"/>
+                <path d="M62,80 C62,48 138,48 138,80 C138,60 125,38 100,38 C75,38 62,60 62,80 Z" fill="#334155"/>
+                <circle cx="84" cy="93" r="4" fill="#1e293b"/>
+                <circle cx="116" cy="93" r="4" fill="#1e293b"/>
+                <path d="M88,114 Q100,122 112,114" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+                <path d="M42,195 Q100,148 158,195 Z" fill="#006c4a"/>
+              </svg>
+              <span class="gender-badge gender-badge-male">Male Avatar</span>
             </div>
             <div class="member-body">
-              <div class="member-name">Simon Joyson Galbao</div>
-              <div class="member-role">PhD Scholar (Aug 2022)</div>
-              <div class="member-info-item"><strong>Education:</strong> MSc, St Aloysius College</div>
-              <div class="member-info-item"><strong>Research:</strong> Carbon nitrides with extended visible-light response for photocatalytic H<sub>2</sub> evolution</div>
+              <div class="member-name">Mr. Shrivathsa V S</div>
+              <div class="member-role">Senior PhD Scholar</div>
+              <div class="member-info-item"><strong>Research Area:</strong> High-Capacity Asymmetric Supercapacitor Devices</div>
+              <div class="member-info-item"><strong>Focus:</strong> Metal Oxide/Carbon Nanotube Hybrid Thin-Film Electrodes</div>
+              <div style="margin-top:auto; padding-top:0.75rem;">
+                <span class="member-tag-chip">Supercapacitors</span>
+                <span class="member-tag-chip">Thin Films</span>
+              </div>
             </div>
           </article>
 
-          <!-- Member 2: Reha -->
+          <!-- Member 6: Mr. Jadan Resnik Jaleel U C -->
           <article class="member-profile-card">
-            <div class="member-img-wrap">
-              <img src="https://cdn.sanity.io/images/kmvatx6v/production/a470fa1c29c90278faf31698ed99b7e6f7c6e307-198x261.jpg?fit=max&auto=format"
-                   alt="Syeda Reha Khadri — PhD Scholar, DST INSPIRE Fellow at Dharmapura Lab" loading="lazy" />
+            <div class="member-avatar-container">
+              <svg class="avatar-svg-animated" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="85" fill="#ffffff" stroke="#006c4a" stroke-width="2"/>
+                <circle cx="100" cy="95" r="38" fill="#f3cb9e"/>
+                <path d="M60,82 C60,50 140,50 140,82 C140,64 128,42 100,42 C72,42 60,64 60,82 Z" fill="#0f172a"/>
+                <circle cx="84" cy="93" r="4" fill="#0f172a"/>
+                <circle cx="116" cy="93" r="4" fill="#0f172a"/>
+                <path d="M88,115 Q100,123 112,115" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+                <path d="M42,195 Q100,148 158,195 Z" fill="#1e293b"/>
+              </svg>
+              <span class="gender-badge gender-badge-male">Male Avatar</span>
             </div>
             <div class="member-body">
-              <div class="member-name">Syeda Reha Khadri</div>
-              <div class="member-role">PhD Scholar (DST INSPIRE Fellow)</div>
-              <div class="member-info-item"><strong>Education:</strong> MSc, Dr. G Shankar GWFGC</div>
-              <div class="member-info-item"><strong>Research:</strong> Synthesis of Bismuth Ferrite with improved optoelectronic properties</div>
+              <div class="member-name">Mr. Jadan Resnik Jaleel U C</div>
+              <div class="member-role">PhD Research Fellow</div>
+              <div class="member-info-item"><strong>Research Area:</strong> Chemiresistive Optical Gas Sensors</div>
+              <div class="member-info-item"><strong>Focus:</strong> Real-time ppm-level Hydrogen and Ammonia Sensor Arrays</div>
+              <div style="margin-top:auto; padding-top:0.75rem;">
+                <span class="member-tag-chip">H2 Leak Sensor</span>
+                <span class="member-tag-chip">Gas Testing</span>
+              </div>
             </div>
           </article>
 
-          <!-- Member 3: Deepu -->
+          <!-- Member 7: Mr. Tanmay Ghildiyal -->
           <article class="member-profile-card">
-            <div class="member-img-wrap">
-              <img src="https://cdn.sanity.io/images/kmvatx6v/production/851e59848dde2bbe8964e4988f787fb8d295e646-230x292.jpg?fit=max&auto=format"
-                   alt="Deepu Maregowda — PhD Scholar, Ernst Mach Fellow at Dharmapura Lab" loading="lazy" />
+            <div class="member-avatar-container">
+              <svg class="avatar-svg-animated" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="85" fill="#ffffff" stroke="#006c4a" stroke-width="2"/>
+                <circle cx="100" cy="95" r="38" fill="#f6d5b8"/>
+                <path d="M62,85 C62,52 138,52 138,85 Q120,48 100,48 Q80,48 62,85 Z" fill="#334155"/>
+                <circle cx="84" cy="93" r="4" fill="#1e293b"/>
+                <circle cx="116" cy="93" r="4" fill="#1e293b"/>
+                <path d="M88,114 Q100,123 112,114" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+                <path d="M42,195 Q100,148 158,195 Z" fill="#047857"/>
+              </svg>
+              <span class="gender-badge gender-badge-male">Male Avatar</span>
             </div>
             <div class="member-body">
-              <div class="member-name">Deepu Maregowda</div>
-              <div class="member-role">PhD Scholar (Ernst Mach Fellow)</div>
-              <div class="member-info-item"><strong>Education:</strong> MSc, Reva University</div>
-              <div class="member-info-item"><strong>Research:</strong> Photoelectrochemical water splitting using modified Si photoelectrodes</div>
+              <div class="member-name">Mr. Tanmay Ghildiyal</div>
+              <div class="member-role">PhD Scholar</div>
+              <div class="member-info-item"><strong>Research Area:</strong> Microfabrication &amp; Solid-State Electrolytes</div>
+              <div class="member-info-item"><strong>Focus:</strong> Ion-Conducting Polymer Electrolytes for Flexible Energy Devices</div>
+              <div style="margin-top:auto; padding-top:0.75rem;">
+                <span class="member-tag-chip">Electrolytes</span>
+                <span class="member-tag-chip">Microfab</span>
+              </div>
             </div>
           </article>
 
-          <!-- Member 4: Sherlin -->
+          <!-- Member 8: Mrs. Bhagyashree K -->
           <article class="member-profile-card">
-            <div class="member-img-wrap">
-              <img src="https://cdn.sanity.io/images/kmvatx6v/production/1bad8563a981c09eca9b5cc428148e1c642dbf19-3224x3594.jpg?rect=411,276,2513,3129&fit=max&auto=format"
-                   alt="Sherlin Samantha Menezes — PhD Scholar at Dharmapura Lab" loading="lazy" />
+            <div class="member-avatar-container">
+              <svg class="avatar-svg-animated" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="85" fill="#fff5f5" stroke="#e53e3e" stroke-width="2"/>
+                <circle cx="100" cy="95" r="37" fill="#f6d5b8"/>
+                <!-- Long Hair -->
+                <path d="M52,75 C52,40 148,40 148,75 C148,115 140,145 130,155 C120,130 140,75 100,75 C60,75 80,130 70,155 C60,145 52,115 52,75 Z" fill="#1e293b"/>
+                <circle cx="84" cy="93" r="4" fill="#1e293b"/>
+                <circle cx="116" cy="93" r="4" fill="#1e293b"/>
+                <path d="M88,114 Q100,123 112,114" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+                <path d="M44,195 Q100,150 156,195 Z" fill="#c53030"/>
+              </svg>
+              <span class="gender-badge gender-badge-female">Female Avatar</span>
             </div>
             <div class="member-body">
-              <div class="member-name">Sherlin Samantha Menezes</div>
-              <div class="member-role">PhD Scholar (Aug 2025)</div>
-              <div class="member-info-item"><strong>Education:</strong> MSc, MIT Manipal</div>
-              <div class="member-info-item"><strong>Research:</strong> Design of two-dimensional borophene for solar energy conversion</div>
+              <div class="member-name">Mrs. Bhagyashree K</div>
+              <div class="member-role">PhD Research Scholar</div>
+              <div class="member-info-item"><strong>Research Area:</strong> Supercapacitor Electrode Nanomaterials</div>
+              <div class="member-info-item"><strong>Focus:</strong> Transition Metal Dichalcogenides for Fast-Charge Storage</div>
+              <div style="margin-top:auto; padding-top:0.75rem;">
+                <span class="member-tag-chip">Electrodes</span>
+                <span class="member-tag-chip">Supercapacitors</span>
+              </div>
             </div>
           </article>
 
-          <!-- Member 5: Dr. Sujana -->
+          <!-- Member 9: Mr. Darshan S G -->
           <article class="member-profile-card">
-            <div class="member-img-wrap">
-              <img src="https://cdn.sanity.io/images/kmvatx6v/production/f22ed01d3c31d1ea2d62a51ff2153760f877f09a-198x261.jpg?fit=max&auto=format"
-                   alt="Dr. Sujana Chandrappa — Research Associate, Postdoctoral Fellow at Dharmapura Lab" loading="lazy" />
+            <div class="member-avatar-container">
+              <svg class="avatar-svg-animated" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="85" fill="#ffffff" stroke="#006c4a" stroke-width="2"/>
+                <circle cx="100" cy="95" r="38" fill="#f5d0b0"/>
+                <path d="M60,82 C60,50 140,50 140,82 C140,65 126,42 100,42 C74,42 60,65 60,82 Z" fill="#0f172a"/>
+                <circle cx="84" cy="93" r="4" fill="#0f172a"/>
+                <circle cx="116" cy="93" r="4" fill="#0f172a"/>
+                <path d="M88,114 Q100,123 112,114" fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round"/>
+                <path d="M42,195 Q100,148 158,195 Z" fill="#2b6cb0"/>
+              </svg>
+              <span class="gender-badge gender-badge-male">Male Avatar</span>
             </div>
             <div class="member-body">
-              <div class="member-name">Dr. Sujana Chandrappa</div>
-              <div class="member-role">Research Associate (Postdoc)</div>
-              <div class="member-info-item"><strong>Education:</strong> PhD, MIT Manipal</div>
-              <div class="member-info-item"><strong>Research:</strong> AI-based smart sensors for real-time ppm H<sub>2</sub> leak detection</div>
+              <div class="member-name">Mr. Darshan S G</div>
+              <div class="member-role">Graduate Research Assistant</div>
+              <div class="member-info-item"><strong>Research Area:</strong> Li-Ion &amp; Solid-State Battery Testing</div>
+              <div class="member-info-item"><strong>Focus:</strong> Electrochemical Impedance &amp; Battery Cycling Diagnostics</div>
+              <div style="margin-top:auto; padding-top:0.75rem;">
+                <span class="member-tag-chip">Battery Testing</span>
+                <span class="member-tag-chip">Cycling Rigs</span>
+              </div>
             </div>
           </article>
 
-          <!-- Member 6: Bhoomika -->
+          <!-- Member 10: Mrs. Aswathi T -->
           <article class="member-profile-card">
-            <div class="member-img-wrap">
-              <img src="https://cdn.sanity.io/images/kmvatx6v/production/959903ca4758ed3fba5792b927a8b0075967fac9-924x1210.jpg?rect=16,94,908,1011&fit=max&auto=format"
-                   alt="Bhoomika H G — Graduate Student at Dharmapura Lab" loading="lazy" />
+            <div class="member-avatar-container">
+              <svg class="avatar-svg-animated" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="85" fill="#fff5f5" stroke="#e53e3e" stroke-width="2"/>
+                <circle cx="100" cy="95" r="37" fill="#f6d5b8"/>
+                <path d="M54,75 C54,42 146,42 146,75 C146,110 138,140 128,150 C118,128 138,75 100,75 C62,75 82,128 72,150 C62,140 54,110 54,75 Z" fill="#2d3748"/>
+                <circle cx="84" cy="93" r="4" fill="#1e293b"/>
+                <circle cx="116" cy="93" r="4" fill="#1e293b"/>
+                <path d="M88,114 Q100,123 112,114" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+                <path d="M44,195 Q100,150 156,195 Z" fill="#9b2c2c"/>
+              </svg>
+              <span class="gender-badge gender-badge-female">Female Avatar</span>
             </div>
             <div class="member-body">
-              <div class="member-name">Bhoomika H G</div>
-              <div class="member-role">Graduate Student (Apr 2026)</div>
-              <div class="member-info-item"><strong>Education:</strong> MSc, JSS STU Mysuru</div>
-              <div class="member-info-item"><strong>Research:</strong> Nanomaterials for green hydrogen production</div>
+              <div class="member-name">Mrs. Aswathi T</div>
+              <div class="member-role">PhD Scholar</div>
+              <div class="member-info-item"><strong>Research Area:</strong> Electrochemical Biosensors</div>
+              <div class="member-info-item"><strong>Focus:</strong> Wearable Micro-sensor Arrays for Point-of-Care Diagnostics</div>
+              <div style="margin-top:auto; padding-top:0.75rem;">
+                <span class="member-tag-chip">Wearable Sensors</span>
+                <span class="member-tag-chip">Micro-Arrays</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Member 11: Ms. Ahana B -->
+          <article class="member-profile-card">
+            <div class="member-avatar-container">
+              <svg class="avatar-svg-animated" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="85" fill="#fff5f5" stroke="#e53e3e" stroke-width="2"/>
+                <circle cx="100" cy="95" r="37" fill="#f5d0b0"/>
+                <path d="M56,75 C56,45 144,45 144,75 C144,105 135,135 126,145 C116,125 135,75 100,75 C65,75 84,125 74,145 C65,135 56,105 56,75 Z" fill="#1a202c"/>
+                <circle cx="84" cy="93" r="4" fill="#1e293b"/>
+                <circle cx="116" cy="93" r="4" fill="#1e293b"/>
+                <path d="M88,114 Q100,123 112,114" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+                <path d="M44,195 Q100,150 156,195 Z" fill="#d53f8c"/>
+              </svg>
+              <span class="gender-badge gender-badge-female">Female Avatar</span>
+            </div>
+            <div class="member-body">
+              <div class="member-name">Ms. Ahana B</div>
+              <div class="member-role">Research Assistant</div>
+              <div class="member-info-item"><strong>Research Area:</strong> Nanomaterial Chemical Synthesis</div>
+              <div class="member-info-item"><strong>Focus:</strong> Hydrothermal &amp; Sol-Gel Synthesis of Metal Oxide Nanostructures</div>
+              <div style="margin-top:auto; padding-top:0.75rem;">
+                <span class="member-tag-chip">Synthesis</span>
+                <span class="member-tag-chip">Nanomaterials</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Member 12: Ms. Apoorva G S -->
+          <article class="member-profile-card">
+            <div class="member-avatar-container">
+              <svg class="avatar-svg-animated" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="85" fill="#fff5f5" stroke="#e53e3e" stroke-width="2"/>
+                <circle cx="100" cy="95" r="37" fill="#f6d5b8"/>
+                <path d="M55,75 C55,42 145,42 145,75 C145,108 136,138 127,148 C117,126 136,75 100,75 C64,75 83,126 73,148 C64,138 55,108 55,75 Z" fill="#2d3748"/>
+                <circle cx="84" cy="93" r="4" fill="#1e293b"/>
+                <circle cx="116" cy="93" r="4" fill="#1e293b"/>
+                <path d="M88,114 Q100,123 112,114" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+                <path d="M44,195 Q100,150 156,195 Z" fill="#805ad5"/>
+              </svg>
+              <span class="gender-badge gender-badge-female">Female Avatar</span>
+            </div>
+            <div class="member-body">
+              <div class="member-name">Ms. Apoorva G S</div>
+              <div class="member-role">Graduate Scholar</div>
+              <div class="member-info-item"><strong>Research Area:</strong> Sensor Signal Readout &amp; Interfacing</div>
+              <div class="member-info-item"><strong>Focus:</strong> Embedded Hardware Interfacing for Chemiresistive Sensor Arrays</div>
+              <div style="margin-top:auto; padding-top:0.75rem;">
+                <span class="member-tag-chip">Sensor Circuits</span>
+                <span class="member-tag-chip">IoT Interfacing</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Member 13: Ms. Spoorti Patil -->
+          <article class="member-profile-card">
+            <div class="member-avatar-container">
+              <svg class="avatar-svg-animated" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="85" fill="#fff5f5" stroke="#e53e3e" stroke-width="2"/>
+                <circle cx="100" cy="95" r="37" fill="#f3cb9e"/>
+                <path d="M54,75 C54,42 146,42 146,75 C146,110 138,140 128,150 C118,128 138,75 100,75 C62,75 82,128 72,150 C62,140 54,110 54,75 Z" fill="#1a202c"/>
+                <circle cx="84" cy="93" r="4" fill="#1e293b"/>
+                <circle cx="116" cy="93" r="4" fill="#1e293b"/>
+                <path d="M88,114 Q100,123 112,114" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+                <path d="M44,195 Q100,150 156,195 Z" fill="#dd6b20"/>
+              </svg>
+              <span class="gender-badge gender-badge-female">Female Avatar</span>
+            </div>
+            <div class="member-body">
+              <div class="member-name">Ms. Spoorti Patil</div>
+              <div class="member-role">Research Scholar</div>
+              <div class="member-info-item"><strong>Research Area:</strong> Solid-State Supercapacitors</div>
+              <div class="member-info-item"><strong>Focus:</strong> Gel Electrolyte Interface Engineering for All-Solid-State Devices</div>
+              <div style="margin-top:auto; padding-top:0.75rem;">
+                <span class="member-tag-chip">Gel Electrolytes</span>
+                <span class="member-tag-chip">Solid State</span>
+              </div>
             </div>
           </article>
         </div>
@@ -223,20 +472,19 @@
     </section>
 
     <!-- Open Positions Section -->
-    <section class="section-padding" style="background: var(--bg-surface-low); border-top: 1px solid var(--subtle-border);" id="open-positions">
+    <section class="section-padding" style="background: var(--paper-white); border-top: 1px solid var(--subtle-border);" id="open-positions">
       <div class="container">
-        <span class="tag-label">OPPORTUNITIES</span>
-        <h2 class="headline-lg" style="margin-bottom: 1.5rem;">Join Our Mission</h2>
+        <span class="tag-label">JOIN DFCL</span>
+        <h2 class="headline-lg" style="margin-bottom: 1.5rem;">Vacancies &amp; Research Fellowships</h2>
 
-        <div style="background: var(--paper-white); padding: 2rem; border-radius: var(--radius-xl); border: 1px solid var(--subtle-border); box-shadow: var(--academic-shadow);">
-          <h3 class="headline-md" style="color: var(--secondary); margin-bottom: 0.5rem;">Ph.D. &amp; Postdoctoral Vacancies</h3>
+        <div style="background: var(--bg-surface-low); padding: 2rem; border-radius: var(--radius-xl); border: 1px solid var(--subtle-border); box-shadow: var(--academic-shadow);">
+          <h3 class="headline-md" style="color: var(--secondary); margin-bottom: 0.5rem;">Ph.D. &amp; Postdoctoral Positions in Energy Storage &amp; Sensors</h3>
           <p style="color: var(--on-surface-variant); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem;">
-            We are looking for motivated researchers with backgrounds in Chemistry, Materials Science, Chemical Engineering, or Nanoscience to work on cutting-edge solar fuels and optoelectronics projects.
+            DFCL invites applications from passionate candidates with backgrounds in Physics, Chemistry, Materials Science, or Electrical Engineering to work on advanced energy storage devices (supercapacitors/batteries) and microfabricated sensors.
           </p>
           <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-            <!-- Fixed: added noreferrer -->
-            <a href="https://www.manipal.edu/mu/academics/phd.html" target="_blank" rel="noopener noreferrer" class="btn-primary">Apply for PhD Portal</a>
-            <a href="mailto:murthy.dharmapura@manipal.edu?subject=Postdoc%20Inquiry" class="btn-secondary-outline">Email CV to PI</a>
+            <a href="https://www.manipal.edu/mu/academics/phd.html" target="_blank" rel="noopener noreferrer" class="btn-primary">Apply via MAHE PhD Portal</a>
+            <a href="mailto:dfcl.lab@manipal.edu?subject=DFCL%20Research%20Inquiry" class="btn-secondary-outline">Email CV to DFCL Office</a>
           </div>
         </div>
       </div>

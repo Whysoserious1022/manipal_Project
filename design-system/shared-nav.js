@@ -1,28 +1,14 @@
 // shared-nav.js — Shared Navigation, Mobile Drawer & Interactions
-// Designed according to Academic Chic UI/UX Specifications
-// Fixed: relative paths (file:// compatible), mobile drawer close-on-click, skip-link, security
+// Designed according to Academic Chic UI/UX Specifications for DFCL
+// Device Fabrication and Characterization Lab (DFCL)
 
 (function() {
   'use strict';
 
-  /**
-   * Calculate a relative base path from the current page back to project root.
-   * Works for file://, localhost, and any subdirectory depth.
-   * pages/home/index.html  → ../../
-   * pages/gallery/index.html → ../../
-   * index.html (root) → ./
-   */
   function getBasePath() {
     var path = window.location.pathname;
-    // Count how many directory levels deep we are
-    // Strip trailing filename
-    var parts = path.replace(/\/[^/]*$/, '').split('/').filter(function(p) { return p !== ''; });
-    // On Windows file:// paths can look like /C:/Users/.../manipal_Project/pages/home
-    // We want to count dirs below project root (pages/home = 2 levels)
-    // Strategy: count path segments that correspond to known page folders
     var depth = 0;
     if (path.indexOf('/pages/') !== -1) {
-      // We're inside pages/<pagename>/
       depth = 2;
     }
     var base = '';
@@ -36,7 +22,7 @@
     { label: 'Home',                 href: BASE + 'pages/home/index.html' },
     { label: 'Members',              href: BASE + 'pages/members/index.html' },
     { label: 'Research',             href: BASE + 'pages/research/index.html' },
-    { label: 'Projects and Fundings',href: BASE + 'pages/projectsandfundings/index.html' },
+    { label: 'Projects & Grants',    href: BASE + 'pages/projectsandfundings/index.html' },
     { label: 'Publications',         href: BASE + 'pages/publications/index.html' },
     { label: 'Gallery',              href: BASE + 'pages/gallery/index.html' },
   ];
@@ -45,7 +31,7 @@
     var path = window.location.pathname.toLowerCase();
     if (path.includes('/members/'))              return 'Members';
     if (path.includes('/research/'))             return 'Research';
-    if (path.includes('/projectsandfundings/'))  return 'Projects and Fundings';
+    if (path.includes('/projectsandfundings/'))  return 'Projects & Grants';
     if (path.includes('/publications/'))         return 'Publications';
     if (path.includes('/gallery/'))              return 'Gallery';
     return 'Home';
@@ -68,7 +54,6 @@
     skip.className = 'skip-link';
     skip.textContent = 'Skip to main content';
     document.body.insertBefore(skip, document.body.firstChild);
-    // Tag the <main> element so the skip link target works
     var main = document.querySelector('main');
     if (main && !main.id) { main.id = 'main-content'; }
   }
@@ -95,10 +80,12 @@
     header.innerHTML =
       '<div class="container">' +
         '<div class="nav-container">' +
-          '<a href="' + escapeHtml(BASE + 'pages/home/index.html') + '" class="brand-logo" aria-label="Dharmapura Lab Home">Dharmapura Lab</a>' +
+          '<a href="' + escapeHtml(BASE + 'pages/home/index.html') + '" class="brand-logo" aria-label="Device Fabrication and Characterization Lab Home">' +
+            '<span class="brand-badge">DFCL</span> Device Fabrication & Characterization Lab' +
+          '</a>' +
           '<nav class="nav-links-desktop" aria-label="Primary navigation">' +
             desktopNavLinks +
-            '<a href="' + escapeHtml(joinHref) + '" class="btn-nav-action">Join Us</a>' +
+            '<a href="' + escapeHtml(joinHref) + '" class="btn-nav-action">Join DFCL</a>' +
           '</nav>' +
           '<button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-drawer">' +
             '<span class="material-symbols-outlined" style="font-size:28px;">menu</span>' +
@@ -107,10 +94,9 @@
       '</div>' +
       '<div class="mobile-drawer" id="mobile-drawer" role="navigation" aria-label="Mobile navigation">' +
         mobileNavLinks +
-        '<a href="' + escapeHtml(joinHref) + '" class="btn-nav-action mobile-nav-link" style="text-align:center;margin-top:0.5rem;">Join Us</a>' +
+        '<a href="' + escapeHtml(joinHref) + '" class="btn-nav-action mobile-nav-link" style="text-align:center;margin-top:0.5rem;">Join DFCL</a>' +
       '</div>';
 
-    // Mobile menu toggle
     var toggleBtn = document.getElementById('mobile-toggle');
     var drawer = document.getElementById('mobile-drawer');
 
@@ -118,12 +104,10 @@
       toggleBtn.addEventListener('click', function() {
         var isOpen = drawer.classList.toggle('open');
         toggleBtn.setAttribute('aria-expanded', String(isOpen));
-        // Toggle icon
         var icon = toggleBtn.querySelector('.material-symbols-outlined');
         if (icon) { icon.textContent = isOpen ? 'close' : 'menu'; }
       });
 
-      // Close drawer when any nav link is clicked
       drawer.querySelectorAll('.mobile-nav-link').forEach(function(link) {
         link.addEventListener('click', function() {
           drawer.classList.remove('open');
@@ -133,7 +117,6 @@
         });
       });
 
-      // Close drawer on Escape key
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && drawer.classList.contains('open')) {
           drawer.classList.remove('open');
@@ -145,7 +128,6 @@
       });
     }
 
-    // Scroll header transformation
     window.addEventListener('scroll', function() {
       if (window.scrollY > 40) {
         header.classList.add('scrolled');
@@ -187,9 +169,9 @@
       '<div class="container">' +
         '<div class="footer-grid">' +
           '<div>' +
-            '<div class="brand-logo" style="margin-bottom:0.75rem;">Dharmapura Lab</div>' +
+            '<div class="brand-logo" style="margin-bottom:0.75rem;"><span class="brand-badge">DFCL</span> Device Fabrication &amp; Characterization Lab</div>' +
             '<p style="font-size:0.875rem;color:var(--on-surface-variant);max-width:280px;line-height:1.6;">' +
-              'Rationally tuning properties for high-efficiency optoelectronic applications and a sustainable energy future.' +
+              'Pioneering Advanced Materials for Energy Storage, Microfabricated Devices, and Next-Generation Smart Sensors.' +
             '</p>' +
           '</div>' +
           '<div>' +
@@ -207,24 +189,24 @@
               '<li><a href="' + escapeHtml(BASE + 'pages/members/index.html#open-positions') + '">Open Positions</a></li>' +
               '<li><a href="' + escapeHtml(BASE + 'pages/projectsandfundings/index.html') + '">Projects &amp; Grants</a></li>' +
               '<li><a href="' + escapeHtml(BASE + 'pages/gallery/index.html') + '">Photo Gallery</a></li>' +
-              '<li><a href="mailto:murthy.dharmapura@manipal.edu">Contact PI</a></li>' +
+              '<li><a href="mailto:dfcl.lab@manipal.edu">Contact DFCL</a></li>' +
             '</ul>' +
           '</div>' +
           '<div>' +
             '<div class="footer-title">Contact &amp; Location</div>' +
             '<p style="font-size:0.85rem;color:var(--on-surface-variant);margin-bottom:0.5rem;line-height:1.5;">' +
-              '<strong>Dr. Murthy Dharmapura</strong><br>' +
-              'Dept. of Chemistry, MIT Manipal<br>' +
-              'MAHE, Karnataka, India - 576104' +
+              '<strong>Device Fabrication and Characterization Lab (DFCL)</strong><br>' +
+              'Department of Physics &amp; Materials Science<br>' +
+              'MIT Manipal, MAHE, Karnataka, India - 576104' +
             '</p>' +
             '<p style="font-size:0.85rem;color:var(--secondary);font-weight:600;">' +
-              'murthy.dharmapura@manipal.edu' +
+              'dfcl.lab@manipal.edu' +
             '</p>' +
           '</div>' +
         '</div>' +
         '<div style="border-top:1px solid var(--subtle-border);padding-top:1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;font-size:0.8rem;color:var(--on-surface-variant);">' +
-          '<p>&copy; 2026 Murthy Dharmapura Lab. Manipal Academy of Higher Education (MAHE).</p>' +
-          '<p>Semiconductor Design for Energy and Optoelectronics</p>' +
+          '<p>&copy; 2026 Device Fabrication and Characterization Lab (DFCL). MAHE.</p>' +
+          '<p>Advanced Materials for Energy Storage and Sensors</p>' +
         '</div>' +
       '</div>';
   }
