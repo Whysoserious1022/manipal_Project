@@ -832,6 +832,97 @@ h1, h2, h3, .heading-serif {
 }
 
 /* ============================================================
+   UI FINE-TUNING & LUXURY ACCOMMODATION CLASSES
+   ============================================================ */
+
+.hero-metric-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--subtle-border);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--slate-heading);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.hero-metric-pill .pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--emerald-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.glow-border {
+  position: relative;
+}
+
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.4) 0%, rgba(0, 108, 74, 0.1) 100%);
+  z-index: -1;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.glow-border:hover::after {
+  opacity: 1;
+}
+
+.doi-link-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--secondary);
+  background: var(--emerald-light);
+  border: 1px solid #a7f3d0;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-md);
+  margin-top: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.doi-link-badge:hover {
+  background: var(--secondary);
+  color: white;
+  border-color: var(--secondary);
+}
+
+.leadership-hero-card {
+  background: var(--paper-white);
+  border: 1px solid var(--subtle-border);
+  border-left: 5px solid var(--secondary);
+  border-radius: var(--radius-2xl);
+  padding: 2rem;
+  box-shadow: var(--academic-shadow);
+  margin-bottom: 2rem;
+  transition: all 0.35s ease;
+}
+
+.leadership-hero-card:hover {
+  box-shadow: var(--academic-shadow-hover);
+  transform: translateY(-3px);
+}
+
+/* ============================================================
    ANIMATIONS
    ============================================================ */
 
