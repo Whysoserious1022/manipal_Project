@@ -1,4 +1,4 @@
-// shared-nav.js — Shared Navigation, Dark Mode Toggle & Interactions
+// shared-nav.js — Shared Navigation, Single Dark Mode Toggle & Interactions
 // Designed according to Academic Chic UI/UX Specifications for DFCL
 // Device Fabrication and Characterization Lab (DFCL)
 
@@ -104,17 +104,15 @@
           '<a href="' + escapeHtml(BASE + 'pages/home/index.html') + '" class="brand-logo" aria-label="Device Fabrication and Characterization Lab Home">' +
             '<span class="brand-badge">DFCL</span> Device Fabrication &amp; Characterization Lab' +
           '</a>' +
-          '<nav class="nav-links-desktop" aria-label="Primary navigation">' +
-            desktopNavLinks +
+          '<div style="display:flex;align-items:center;gap:0.75rem;">' +
+            '<nav class="nav-links-desktop" aria-label="Primary navigation">' +
+              desktopNavLinks +
+            '</nav>' +
+            '<!-- SINGLE UNIFIED DARK MODE BUTTON -->' +
             '<button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark mode" title="Toggle dark mode">' +
               '<span class="material-symbols-outlined" style="font-size:20px;">' + (isDarkMode ? 'light_mode' : 'dark_mode') + '</span>' +
             '</button>' +
-            '<a href="' + escapeHtml(joinHref) + '" class="btn-nav-action">Join DFCL</a>' +
-          '</nav>' +
-          '<div style="display:flex;align-items:center;gap:0.5rem;" class="mobile-actions">' +
-            '<button class="theme-toggle-btn" id="theme-toggle-btn-mobile" aria-label="Toggle dark mode" title="Toggle dark mode">' +
-              '<span class="material-symbols-outlined" style="font-size:20px;">' + (isDarkMode ? 'light_mode' : 'dark_mode') + '</span>' +
-            '</button>' +
+            '<a href="' + escapeHtml(joinHref) + '" class="btn-nav-action btn-nav-desktop-only">Join DFCL</a>' +
             '<button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-drawer">' +
               '<span class="material-symbols-outlined" style="font-size:28px;">menu</span>' +
             '</button>' +
@@ -132,16 +130,14 @@
       document.documentElement.setAttribute('data-theme', theme);
       try { localStorage.setItem('dfcl_theme', theme); } catch(e) {}
 
-      var icons = document.querySelectorAll('.theme-toggle-btn .material-symbols-outlined');
-      icons.forEach(function(icon) {
+      var icon = document.querySelector('#theme-toggle-btn .material-symbols-outlined');
+      if (icon) {
         icon.textContent = currentlyDark ? 'light_mode' : 'dark_mode';
-      });
+      }
     }
 
-    var themeBtnDesktop = document.getElementById('theme-toggle-btn');
-    var themeBtnMobile  = document.getElementById('theme-toggle-btn-mobile');
-    if (themeBtnDesktop) themeBtnDesktop.addEventListener('click', toggleTheme);
-    if (themeBtnMobile)  themeBtnMobile.addEventListener('click', toggleTheme);
+    var themeBtn = document.getElementById('theme-toggle-btn');
+    if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
 
     var toggleBtn = document.getElementById('mobile-toggle');
     var drawer = document.getElementById('mobile-drawer');
