@@ -71,94 +71,130 @@
     <section class="section-padding" style="background: var(--bg-surface-low); padding-top: 8.5rem;">
       <div class="container">
         <span class="tag-label">SCHOLARLY OUTPUT</span>
-        <h1 class="display-lg" style="margin-bottom: 2rem;">DFCL Publications &amp; Patents</h1>
+        <h1 class="display-lg" style="margin-bottom: 1rem;">DFCL Publications &amp; Patents</h1>
+        <p style="color: var(--on-surface-variant); font-size: 0.95rem; max-width: 700px; margin-bottom: 2rem;">
+          Browse our research publications, patents, and review papers on Advanced Materials for Energy Storage, Supercapacitors, Batteries, and Smart Sensors.
+        </p>
 
-        <!-- 2026 -->
-        <h2 class="headline-lg" style="margin-bottom: 1.25rem; border-bottom: 2px solid var(--secondary); padding-bottom: 0.4rem; display: inline-block;">2026</h2>
-        <div style="margin-bottom: 2.5rem;">
-
-          <article class="pub-card-academic">
-            <div class="pub-content">
-              <span class="badge badge-publication">Review Article</span>
-              <a class="pub-title-link" href="https://doi.org/10.1002/batt.202500958" target="_blank" rel="noopener noreferrer">
-                Optical Spectroscopy and Impedance Analysis to Characterize Advanced Metal–Sulfur Battery Materials and Sensors: A Review
-              </a>
-              <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: 0.2rem;">DFCL Research Group &amp; Collaborators</p>
-              <p style="font-size: 0.85rem; font-weight: 600; color: var(--secondary);">Batteries &amp; Supercaps 9(5), e202500958.</p>
-            </div>
-            <img src="https://cdn.sanity.io/images/kmvatx6v/production/75a698fd0f1f826c3c44cea1b9c05e60d6ea5292-13333x7500.png?auto=format&h=140"
-                 alt="Optical Spectroscopy and Battery Materials review figure" class="pub-thumbnail" loading="lazy" />
-          </article>
-
-          <article class="pub-card-academic">
-            <div class="pub-content">
-              <span class="badge badge-publication">ACS AEM</span>
-              <a class="pub-title-link" href="https://doi.org/10.1021/acsaem.6c01203" target="_blank" rel="noopener noreferrer">
-                Designing 2D MXene Heterostructures for High-Power Hybrid Supercapacitors and Gas Sensor Integration
-              </a>
-              <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: 0.2rem;">Dr. Shounak De, Shrivathsa V S, Dr. Shailendra Tiwari, Dr. Somashekara Bhat</p>
-              <p style="font-size: 0.85rem; font-weight: 600; color: var(--secondary);">ACS Applied Energy Materials 9(2), 1204-1215.</p>
-            </div>
-            <img src="https://cdn.sanity.io/images/kmvatx6v/production/1922581af9c43cb1676f0a7fbc1b1e24e0a03e3c-3248x1752.png?auto=format&h=140"
-                 alt="2D MXene Heterostructures article figure" class="pub-thumbnail" loading="lazy" />
-          </article>
-
-          <article class="pub-card-academic">
-            <div class="pub-content">
-              <span class="badge badge-publication">Frontiers</span>
-              <a class="pub-title-link" href="https://doi.org/10.1039/D6QM00392C" target="_blank" rel="noopener noreferrer">
-                Microfabricated Chemiresistive Gas Sensor Rigs for Sub-ppm Hydrogen Gas Detection at Room Temperature
-              </a>
-              <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: 0.2rem;">Jadan Resnik Jaleel U C, Dr. Arjun Sunil Rao, Tanmay Ghildiyal, Dr. Somashekara Bhat</p>
-              <p style="font-size: 0.85rem; font-weight: 600; color: var(--secondary);">Materials Chemistry Frontiers 10(4), 450-462.</p>
-            </div>
-            <img src="https://cdn.sanity.io/images/kmvatx6v/production/887bfa3718483b3c20e57720809d9fe6e402d8e1-3149x1575.tif?auto=format&h=140"
-                 alt="Microfabricated Chemiresistive Gas Sensor article figure" class="pub-thumbnail" loading="lazy" />
-          </article>
-
+        <!-- Search Bar -->
+        <div class="search-input-wrapper">
+          <span class="material-symbols-outlined search-input-icon">search</span>
+          <input type="text" id="pub-search-input" class="search-input-field" placeholder="Search publications by author, title, journal, or keyword..." aria-label="Search publications" />
         </div>
 
-        <!-- 2025 -->
-        <h2 class="headline-lg" style="margin-bottom: 1.25rem; border-bottom: 2px solid var(--secondary); padding-bottom: 0.4rem; display: inline-block;">2025</h2>
-        <div style="margin-bottom: 2.5rem;">
+        <!-- Filter Chips -->
+        <div class="filter-bar-container" role="tablist" aria-label="Filter publications by topic">
+          <button type="button" class="filter-chip-btn active" data-pub-filter="all">All Outputs</button>
+          <button type="button" class="filter-chip-btn" data-pub-filter="storage">Energy Storage &amp; Batteries</button>
+          <button type="button" class="filter-chip-btn" data-pub-filter="sensor">Gas &amp; Bio-Sensors</button>
+          <button type="button" class="filter-chip-btn" data-pub-filter="patent">Patents</button>
+        </div>
+      </div>
+    </section>
 
-          <article class="pub-card-academic">
-            <div class="pub-content">
-              <span class="badge badge-publication">RSC Advances</span>
-              <a class="pub-title-link" href="https://doi.org/10.1039/D5MA00995B" target="_blank" rel="noopener noreferrer">
-                Atmosphere-Dependent Defect Formation in Thin-Film Electrodes for All-Solid-State Supercapacitors
-              </a>
-              <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: 0.2rem;">Bhagyashree K, Dr. Shailendra Tiwari, Darshan S G, Dr. Shounak De</p>
-              <p style="font-size: 0.85rem; font-weight: 600; color: var(--secondary);">Materials Advances 6(22), 8713-8723.</p>
-            </div>
-            <img src="https://cdn.sanity.io/images/kmvatx6v/production/137a43a16493fabe4bcbfb5093047f95765d6eb5-377x189.png?auto=format&h=140"
-                 alt="Thin-Film Electrodes defect analysis article figure" class="pub-thumbnail" loading="lazy" />
-          </article>
+    <!-- Publication List -->
+    <section class="section-padding" style="background: var(--paper-white);">
+      <div class="container">
 
-          <article class="pub-card-academic">
-            <div class="pub-content">
-              <span class="badge badge-publication">Polymer Chem</span>
-              <a class="pub-title-link" href="https://pubs.rsc.org/en/content/articlelanding/2025/py/d5py01003a" target="_blank" rel="noopener noreferrer">
-                Flexible Gel Electrolyte Interfaces for Wearable Electrochemical Biosensor Micro-Arrays
-              </a>
-              <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: 0.2rem;">Aswathi T, Spoorti Patil, Apoorva G S, Ahana B, Dr. Arjun Sunil Rao</p>
-              <p style="font-size: 0.85rem; font-weight: 600; color: var(--secondary);">Polymer Chemistry 17(1), 35-44 (Cover Feature).</p>
-            </div>
-            <img src="https://cdn.sanity.io/images/kmvatx6v/production/b696e44e44b8ea4ce5f201d99973d04cde8efcc8-3149x1575.png?auto=format&h=140"
-                 alt="Flexible Gel Electrolyte Interfaces cover feature figure" class="pub-thumbnail" loading="lazy" />
-          </article>
+        <!-- 2026 Section -->
+        <div class="pub-year-group" data-year="2026">
+          <h2 class="headline-lg" style="margin-bottom: 1.25rem; border-bottom: 2px solid var(--secondary); padding-bottom: 0.4rem; display: inline-block;">2026</h2>
+          <div style="margin-bottom: 2.5rem;">
 
+            <article class="pub-card-academic filterable-item" data-topic="storage">
+              <div class="pub-content">
+                <span class="badge badge-publication">Review Article</span>
+                <a class="pub-title-link" href="https://doi.org/10.1002/batt.202500958" target="_blank" rel="noopener noreferrer">
+                  Optical Spectroscopy and Impedance Analysis to Characterize Advanced Metal–Sulfur Battery Materials and Sensors: A Review
+                </a>
+                <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: 0.2rem;">DFCL Research Group &amp; Collaborators</p>
+                <p style="font-size: 0.85rem; font-weight: 600; color: var(--secondary);">Batteries &amp; Supercaps 9(5), e202500958.</p>
+              </div>
+              <img src="https://cdn.sanity.io/images/kmvatx6v/production/75a698fd0f1f826c3c44cea1b9c05e60d6ea5292-13333x7500.png?auto=format&h=140"
+                   alt="Optical Spectroscopy and Battery Materials review figure" class="pub-thumbnail" loading="lazy" />
+            </article>
+
+            <article class="pub-card-academic filterable-item" data-topic="storage">
+              <div class="pub-content">
+                <span class="badge badge-publication">ACS AEM</span>
+                <a class="pub-title-link" href="https://doi.org/10.1021/acsaem.6c01203" target="_blank" rel="noopener noreferrer">
+                  Designing 2D MXene Heterostructures for High-Power Hybrid Supercapacitors and Gas Sensor Integration
+                </a>
+                <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: 0.2rem;">Dr. Shounak De, Shrivathsa V S, Dr. Shailendra Tiwari, Dr. Somashekara Bhat</p>
+                <p style="font-size: 0.85rem; font-weight: 600; color: var(--secondary);">ACS Applied Energy Materials 9(2), 1204-1215.</p>
+              </div>
+              <img src="https://cdn.sanity.io/images/kmvatx6v/production/1922581af9c43cb1676f0a7fbc1b1e24e0a03e3c-3248x1752.png?auto=format&h=140"
+                   alt="2D MXene Heterostructures article figure" class="pub-thumbnail" loading="lazy" />
+            </article>
+
+            <article class="pub-card-academic filterable-item" data-topic="sensor">
+              <div class="pub-content">
+                <span class="badge badge-publication">Frontiers</span>
+                <a class="pub-title-link" href="https://doi.org/10.1039/D6QM00392C" target="_blank" rel="noopener noreferrer">
+                  Microfabricated Chemiresistive Gas Sensor Rigs for Sub-ppm Hydrogen Gas Detection at Room Temperature
+                </a>
+                <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: 0.2rem;">Jadan Resnik Jaleel U C, Dr. Arjun Sunil Rao, Tanmay Ghildiyal, Dr. Somashekara Bhat</p>
+                <p style="font-size: 0.85rem; font-weight: 600; color: var(--secondary);">Materials Chemistry Frontiers 10(4), 450-462.</p>
+              </div>
+              <img src="https://cdn.sanity.io/images/kmvatx6v/production/887bfa3718483b3c20e57720809d9fe6e402d8e1-3149x1575.tif?auto=format&h=140"
+                   alt="Microfabricated Chemiresistive Gas Sensor article figure" class="pub-thumbnail" loading="lazy" />
+            </article>
+
+          </div>
         </div>
 
-        <!-- Patents -->
-        <h2 class="headline-lg" style="margin-top: 3rem; margin-bottom: 1.25rem;">DFCL Patents &amp; Innovations</h2>
-        <div style="background: var(--paper-white); border: 1px solid var(--subtle-border); border-radius: var(--radius-xl); padding: 1.5rem 2rem; box-shadow: var(--academic-shadow);">
-          <ul style="margin-left: 1.25rem; color: var(--on-surface-variant); font-size: 0.95rem; line-height: 2;">
-            <li><strong>Electrochemical method and electrocatalyst system for selective capture and energy storage</strong> (Application No. 202441103742)</li>
-            <li><strong>One step synthesis of metal catalyst development on Ni foam for alkaline electrolysis and battery electrodes</strong> (Application No. 202541107168)</li>
-            <li><strong>Method for producing sulfur-biochar composite materials for high-energy density supercapacitors</strong> (Application No. 202541080544)</li>
-          </ul>
+        <!-- 2025 Section -->
+        <div class="pub-year-group" data-year="2025">
+          <h2 class="headline-lg" style="margin-bottom: 1.25rem; border-bottom: 2px solid var(--secondary); padding-bottom: 0.4rem; display: inline-block;">2025</h2>
+          <div style="margin-bottom: 2.5rem;">
+
+            <article class="pub-card-academic filterable-item" data-topic="storage">
+              <div class="pub-content">
+                <span class="badge badge-publication">RSC Advances</span>
+                <a class="pub-title-link" href="https://doi.org/10.1039/D5MA00995B" target="_blank" rel="noopener noreferrer">
+                  Atmosphere-Dependent Defect Formation in Thin-Film Electrodes for All-Solid-State Supercapacitors
+                </a>
+                <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: 0.2rem;">Bhagyashree K, Dr. Shailendra Tiwari, Darshan S G, Dr. Shounak De</p>
+                <p style="font-size: 0.85rem; font-weight: 600; color: var(--secondary);">Materials Advances 6(22), 8713-8723.</p>
+              </div>
+              <img src="https://cdn.sanity.io/images/kmvatx6v/production/137a43a16493fabe4bcbfb5093047f95765d6eb5-377x189.png?auto=format&h=140"
+                   alt="Thin-Film Electrodes defect analysis article figure" class="pub-thumbnail" loading="lazy" />
+            </article>
+
+            <article class="pub-card-academic filterable-item" data-topic="sensor">
+              <div class="pub-content">
+                <span class="badge badge-publication">Polymer Chem</span>
+                <a class="pub-title-link" href="https://pubs.rsc.org/en/content/articlelanding/2025/py/d5py01003a" target="_blank" rel="noopener noreferrer">
+                  Flexible Gel Electrolyte Interfaces for Wearable Electrochemical Biosensor Micro-Arrays
+                </a>
+                <p style="font-size: 0.875rem; color: var(--on-surface-variant); margin-bottom: 0.2rem;">Aswathi T, Spoorti Patil, Apoorva G S, Ahana B, Dr. Arjun Sunil Rao</p>
+                <p style="font-size: 0.85rem; font-weight: 600; color: var(--secondary);">Polymer Chemistry 17(1), 35-44 (Cover Feature).</p>
+              </div>
+              <img src="https://cdn.sanity.io/images/kmvatx6v/production/b696e44e44b8ea4ce5f201d99973d04cde8efcc8-3149x1575.png?auto=format&h=140"
+                   alt="Flexible Gel Electrolyte Interfaces cover feature figure" class="pub-thumbnail" loading="lazy" />
+            </article>
+
+          </div>
         </div>
+
+        <!-- Patents Section -->
+        <div class="pub-year-group" data-year="patents">
+          <h2 class="headline-lg" style="margin-top: 2rem; margin-bottom: 1.25rem;">DFCL Patents &amp; Innovations</h2>
+          <div class="filterable-item" data-topic="patent" style="background: var(--paper-white); border: 1px solid var(--subtle-border); border-radius: var(--radius-xl); padding: 1.5rem 2rem; box-shadow: var(--academic-shadow);">
+            <ul style="margin-left: 1.25rem; color: var(--on-surface-variant); font-size: 0.95rem; line-height: 2;">
+              <li><strong>Electrochemical method and electrocatalyst system for selective capture and energy storage</strong> (Application No. 202441103742)</li>
+              <li><strong>One step synthesis of metal catalyst development on Ni foam for alkaline electrolysis and battery electrodes</strong> (Application No. 202541107168)</li>
+              <li><strong>Method for producing sulfur-biochar composite materials for high-energy density supercapacitors</strong> (Application No. 202541080544)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="no-search-results" style="display:none; text-align:center; padding: 3rem 1rem; color: var(--on-surface-variant);">
+          <span class="material-symbols-outlined" style="font-size: 48px; opacity:0.5; margin-bottom: 0.5rem;">search_off</span>
+          <h3 style="font-size: 1.2rem; color: var(--slate-heading);">No matching publications found</h3>
+          <p style="font-size: 0.9rem;">Try adjusting your keyword or clearing the filter.</p>
+        </div>
+
       </div>
     </section>
   </main>
@@ -166,5 +202,53 @@
   <footer id="site-footer"></footer>
 
   <script src="../../design-system/shared-nav.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var searchInput = document.getElementById('pub-search-input');
+      var filterBtns  = document.querySelectorAll('[data-pub-filter]');
+      var pubCards    = document.querySelectorAll('.filterable-item');
+      var noResults   = document.getElementById('no-search-results');
+      var currentFilter = 'all';
+
+      function applyFilterAndSearch() {
+        var query = searchInput.value.toLowerCase().trim();
+        var visibleCount = 0;
+
+        pubCards.forEach(function(card) {
+          var topic = card.getAttribute('data-topic');
+          var text  = card.textContent.toLowerCase();
+
+          var matchesFilter = (currentFilter === 'all' || topic === currentFilter);
+          var matchesQuery  = (!query || text.indexOf(query) !== -1);
+
+          if (matchesFilter && matchesQuery) {
+            card.classList.remove('hidden-item');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden-item');
+          }
+        });
+
+        if (noResults) {
+          noResults.style.display = (visibleCount === 0) ? 'block' : 'none';
+        }
+      }
+
+      filterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          currentFilter = btn.getAttribute('data-pub-filter');
+
+          filterBtns.forEach(function(b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+
+          applyFilterAndSearch();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', applyFilterAndSearch);
+      }
+    });
+  </script>
 </body>
 </html>

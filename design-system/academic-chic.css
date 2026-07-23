@@ -1,6 +1,6 @@
 /* ============================================================
-   ACADEMIC CHIC DESIGN SYSTEM — DH KMURTHY LAB
-   Separate CSS stylesheet for UI/UX Design System
+   ACADEMIC CHIC DESIGN SYSTEM — DFCL LAB (MIT MANIPAL)
+   Standalone CSS stylesheet for UI/UX Design System
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
@@ -746,6 +746,89 @@ h1, h2, h3, .heading-serif {
   background: #fff5f5;
   color: #c53030;
   border: 1px solid #fed7d7;
+}
+
+/* ============================================================
+   INTERACTIVE FILTER BARS & SEARCH UTILITIES
+   ============================================================ */
+
+.filter-bar-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.filter-chip-btn {
+  background: var(--paper-white);
+  color: var(--on-surface-variant);
+  border: 1px solid var(--subtle-border);
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.filter-chip-btn:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+  background: var(--bg-surface-low);
+}
+
+.filter-chip-btn.active {
+  background: var(--secondary);
+  color: white;
+  border-color: var(--secondary);
+  box-shadow: 0 4px 12px rgba(0, 108, 74, 0.25);
+}
+
+.search-input-wrapper {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.search-input-field {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.8rem;
+  background: var(--paper-white);
+  border: 1px solid var(--subtle-border);
+  border-radius: var(--radius-lg);
+  font-size: 0.925rem;
+  color: var(--slate-heading);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.search-input-field:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 4px 16px rgba(0, 108, 74, 0.15);
+  outline: none;
+}
+
+.search-input-icon {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--on-surface-variant);
+  pointer-events: none;
+  font-size: 20px;
+}
+
+.filterable-item {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.filterable-item.hidden-item {
+  display: none !important;
+  opacity: 0;
+  transform: scale(0.95);
 }
 
 /* ============================================================
